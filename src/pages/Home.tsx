@@ -1,6 +1,9 @@
 import Hero from '../components/sections/Hero';
+import BotolanAtAGlance from '../components/home/BotolanAtAGlance';
 import ServicesSection from '../components/home/ServicesSection';
+import DiscoverBotolan from '../components/home/DiscoverBotolan';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
+import HelpCta from '../components/home/HelpCta';
 import SEO from '../components/SEO';
 import { siteConfig } from '../config/site';
 
@@ -14,8 +17,11 @@ const Home: React.FC = () => {
       />
       <main className="flex-grow">
         <Hero />
+        <BotolanAtAGlance />
         <ServicesSection />
-        <GovernmentActivitySection />
+        <DiscoverBotolan />
+        <GovernmentActivitySection title="Government" />
+        <HelpCta />
       </main>
     </>
   );
