@@ -1,9 +1,9 @@
 {
-  "site_name": "Lapu Lapu City Portal",
-  "site_description": "A community-run portal for the Lapu Lapu City",
+  "site_name": "Better Botolan",
+  "site_description": "A community-run portal for the Municipality of Botolan, Zambales",
   "hero": {
-    "title": "Welcome to BetterGov.ph",
-    "subtitle": "A community-run portal to find information of the Lapu Lapu City Government",
+    "title": "Better Botolan",
+    "subtitle": "Find verified public services, government offices, contacts, and official information for Botolan, Zambales, all in one place.",
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"
@@ -29,7 +29,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2025 BetterGov. All content is public domain unless otherwise specified."
+    "copyright": "© 2026 Better Botolan. A community-run project, not an official website of the Municipality of Botolan. Content is public domain unless otherwise specified."
   },
   "navbar": {
     "government": "Government",
