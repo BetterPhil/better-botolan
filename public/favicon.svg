@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Better Botolan emblem">
+  <defs>
+    <clipPath id="bb-clip"><circle cx="32" cy="32" r="24.5"/></clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="#C8102E"/>
+  <circle cx="32" cy="32" r="27.5" fill="#FFFFFF"/>
+  <g clip-path="url(#bb-clip)">
+    <rect width="64" height="64" fill="#FFFFFF"/>
+    <circle cx="45" cy="18" r="5.5" fill="#FBD9DE"/>
+    <!-- distant ridge -->
+    <path d="M0 42 L11 31 L18 36 L26 27 L38 38 L48 31 L64 44 V64 H0Z" fill="#F4B6BF"/>
+    <!-- Mount Pinatubo: broad cone with a broken, notched crater rim -->
+    <path d="M5 46 L21 31 L26.5 25.5 L30 29 L33 26.5 L37.5 24.5 L41 29.5 L59 46 Z" fill="#C8102E"/>
+    <path d="M26.5 25.5 L30 29 L33 26.5 L37.5 24.5" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+    <!-- sea -->
+    <rect x="0" y="44" width="64" height="22" fill="#7A0A1C"/>
+    <path d="M0 47.5 Q4 45 8 47.5 T16 47.5 T24 47.5 T32 47.5 T40 47.5 T48 47.5 T56 47.5 T64 47.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity=".55"/>
+    <path d="M0 53.5 Q4 51 8 53.5 T16 53.5 T24 53.5 T32 53.5 T40 53.5 T48 53.5 T56 53.5 T64 53.5" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity=".35"/>
+    <!-- sailboat (the red sail of the municipal seal, inverted for contrast) -->
+    <path d="M33.5 35 L33.5 48.5 L25.5 48.5 Z" fill="#FFFFFF"/>
+    <path d="M24 49.5 H42 L38.5 53.5 H27.5 Z" fill="#C8102E"/>
+  </g>
+</svg>

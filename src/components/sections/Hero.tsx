@@ -27,14 +27,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary-700 to-primary-900 text-white">
+    <section className="relative overflow-hidden bg-primary-900 text-white">
+      {/* Mount Pinatubo backdrop (public/images/pinatubo-hero.svg) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0"
         style={{
-          backgroundImage:
-            'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '28px 28px',
+          backgroundImage: 'url(/images/pinatubo-hero.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center bottom',
         }}
       />
 

@@ -8,16 +8,16 @@
 @theme {
   --font-serif: Georgia, 'Times New Roman', serif;
 
-  --color-primary-50: #e6f0fd;
-  --color-primary-100: #cce0fb;
-  --color-primary-200: #99c2f7;
-  --color-primary-300: #66a3f3;
-  --color-primary-400: #3385ef;
-  --color-primary-500: #0066eb;
-  --color-primary-600: #0052bc;
-  --color-primary-700: #003d8d;
-  --color-primary-800: #00295e;
-  --color-primary-900: #00142f;
+  --color-primary-50: #fdecee;
+  --color-primary-100: #fad3d8;
+  --color-primary-200: #f4a7b1;
+  --color-primary-300: #ec7a89;
+  --color-primary-400: #e04a5e;
+  --color-primary-500: #d42a41;
+  --color-primary-600: #c8102e;
+  --color-primary-700: #a30d25;
+  --color-primary-800: #7a0a1c;
+  --color-primary-900: #4d0611;
 
   --color-secondary-50: #ffede6;
   --color-secondary-100: #ffdbcc;

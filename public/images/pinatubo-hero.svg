@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Mount Pinatubo silhouette">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3D0610"/>
+      <stop offset="0.6" stop-color="#7A0A1C"/>
+      <stop offset="1" stop-color="#A30D25"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.62" r="0.45">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.14"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="640" fill="url(#sky)"/>
+  <rect width="1600" height="640" fill="url(#glow)"/>
+
+  <!-- soft ash clouds -->
+  <g fill="#FFFFFF" opacity="0.07">
+    <ellipse cx="420" cy="170" rx="220" ry="26"/>
+    <ellipse cx="1180" cy="130" rx="260" ry="22"/>
+    <ellipse cx="860" cy="250" rx="180" ry="18"/>
+  </g>
+
+  <!-- far ridge (Zambales range) -->
+  <path d="M0 470 L120 410 L230 450 L360 380 L500 440 L640 400 L760 430 L900 390 L1040 440 L1180 380 L1320 430 L1460 395 L1600 450 V640 H0Z" fill="#FFFFFF" opacity="0.09"/>
+
+  <!-- Mount Pinatubo: broad cone, broken summit and crater notch -->
+  <path d="M250 640 L520 470 L660 400 L720 340 L770 372 L810 340 L860 318 L905 372 L960 400 L1130 480 L1400 640 Z" fill="#5C0916"/>
+  <!-- lit ridge lines -->
+  <path d="M720 340 L770 372 L810 340 L860 318" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <path d="M660 400 L600 470 M960 400 L1030 478 M770 372 L740 470 M860 318 L880 440" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.12"/>
+
+  <!-- foreground hills -->
+  <path d="M0 560 L200 520 L420 560 L640 530 L860 575 L1080 535 L1300 570 L1600 525 V640 H0Z" fill="#3D0610"/>
+  <rect y="480" width="1600" height="160" fill="url(#haze)"/>
+</svg>

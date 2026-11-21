@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
-import { ChevronDown, Landmark, Menu, Search, X } from 'lucide-react';
+import { ChevronDown, Menu, Search, X } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import { isMeilisearchEnabled } from '../../lib/meilisearch';
 import { siteConfig } from '../../config/site';
@@ -53,9 +53,13 @@ export default function Navbar() {
               className="flex items-center gap-3"
               onClick={closeMenu}
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-600 text-white">
-                <Landmark className="h-6 w-6" aria-hidden="true" />
-              </span>
+              <img
+                src="/logo-mark.svg"
+                alt=""
+                className="h-12 w-12"
+                width={48}
+                height={48}
+              />
               <span className="leading-tight">
                 <span className="block text-xs font-medium text-primary-600">
                   Better
