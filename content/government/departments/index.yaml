@@ -1,10 +1,10 @@
 # Department Pages
-# This file contains all the pages/governments available under the Department
+# This file lists the pages available under Municipal Government
 
 pages:
-  - name: 'Executive'
+  - name: 'Mayor and Vice Mayor (Executive)'
     slug: 'executive'
-    description: "Find out about your Mayor and Vice Mayor, including upcoming events, the Mayor's Community Assistance Program, mayoral history, and information about other historic roles in the local government unit."
-  - name: 'Legislative'
+    description: 'Meet the current Mayor and Vice Mayor of Botolan and learn what the executive branch of the municipal government does.'
+  - name: 'Sangguniang Bayan (Legislative)'
     slug: 'legislative'
-    description: 'As of the 2025–2028 term, the Sangguniang Panlungsod (City Council) of Lapu-Lapu City has 12 elected councilors, with the Vice Mayor as the presiding officer of the council.'
+    description: 'The Sangguniang Bayan is the legislative council of Botolan. It enacts local ordinances and resolutions, and the Vice Mayor serves as its presiding officer.'

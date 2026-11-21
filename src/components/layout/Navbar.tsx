@@ -10,11 +10,12 @@ import EmergencyBar from './EmergencyBar';
 import UtilityBar from './UtilityBar';
 
 // Home and About wrap the data-driven Services / Government menus.
-// TODO (Part 6): add Projects, Transparency and Contact once those pages exist.
+// TODO (Part 7): add Projects and Transparency once those pages exist.
 const navItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
   ...mainNavigation,
   { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 function topSegment(href: string) {

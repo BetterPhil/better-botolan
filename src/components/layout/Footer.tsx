@@ -71,6 +71,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/contact" className={linkClass}>
+                  Contact
+                </Link>
+              </li>
+              <li>
                 <a
                   href={siteConfig.nationalHotlinesUrl}
                   target="_blank"

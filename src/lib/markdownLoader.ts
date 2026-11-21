@@ -2,6 +2,10 @@
  * Utility to load markdown content dynamically based on slug
  */
 
+// Botolan-wide values ({SHORT_NAME}, {MHO_WHERE}, ...) shared by every page.
+// Edit content/botolan.json to fill in details as you verify them.
+import botolanVars from '../../content/botolan.json';
+
 /**
  * Replaces {PLACEHOLDER} tokens using JSON data first, then VITE_ env vars.
  */
@@ -53,7 +57,7 @@ export async function loadMarkdownContent(
     const module = await import(
       `../../content/${dir}/${categorySlug}/${documentSlug}.md?raw`
     );
-    const content = interpolate(module.default, data);
+    const content = interpolate(module.default, { ...botolanVars, ...data });
 
     const titleMatch = content.match(/^#\s+(.+)$/m);
     const title = titleMatch ? titleMatch[1] : undefined;
@@ -71,4 +75,21 @@ export async function loadMarkdownContent(
     );
     throw new Error(`Document not found: ${documentSlug}`, { cause: error });
   }
+}
+
+/**
+ * Loads a standalone page from content/pages/<slug>.md (About, Contact, ...).
+ */
+export async function loadStaticPage(slug: string): Promise<MarkdownContent> {
+  const module = await import(`../../content/pages/${slug}.md?raw`);
+  const content = interpolate(module.default, botolanVars);
+
+  const titleMatch = content.match(/^#\s+(.+)$/m);
+  const descriptionMatch = content.match(/^#\s+.+$\n\n(.+?)(?:\n\n|$)/s);
+
+  return {
+    content,
+    title: titleMatch ? titleMatch[1] : undefined,
+    description: descriptionMatch ? descriptionMatch[1].trim() : undefined,
+  };
 }

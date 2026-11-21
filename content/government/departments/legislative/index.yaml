@@ -1,9 +1,17 @@
-# legislative Department Pages
-# This file contains all the pages/governments/departments/legislative available under the Department
-#
-layout: grid
-title: 'Legislative Department'
-description: 'Page Description'
+# Sangguniang Bayan of Botolan
+# The legislative body of the municipality.
+# TODO: Add the names of the eight regular members after confirming with the Sangguniang Bayan Secretary.
+layout: list
+title: 'Sangguniang Bayan of Botolan'
+description: 'The Sangguniang Bayan is the legislative council of the municipality. It passes ordinances and resolutions, approves the municipal budget, and makes local policy. Its sessions are generally open to the public. Under the Local Government Code, a municipality has the Vice Mayor as presiding officer, eight regular members, and ex officio members.'
 pages:
-  - name: 'Councilor A'
-    description: 'Description'
+  - name: 'Presiding Officer: Vice Mayor Atty. Edmund Dante D. Perez'
+    description: 'The Vice Mayor presides over sessions of the Sangguniang Bayan.'
+  - name: 'Eight regular members (Sangguniang Bayan members or councilors)'
+    description: 'Elected by the voters of Botolan every three years. The names of the current members are to be confirmed with the Sangguniang Bayan Secretary.'
+  - name: 'Ex officio member: President of the Liga ng mga Barangay (Botolan chapter)'
+    description: 'Represents the 31 barangays of Botolan in the Sangguniang Bayan.'
+  - name: 'Ex officio member: President of the Sangguniang Kabataan Federation'
+    description: 'Represents the youth of Botolan in the Sangguniang Bayan.'
+  - name: 'Indigenous Peoples Mandatory Representative (IPMR)'
+    description: 'Represents indigenous cultural communities in Botolan in the Sangguniang Bayan.'
