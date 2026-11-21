@@ -7,24 +7,22 @@ interface HeadingProps {
   className?: string;
 }
 
-const headingStyles = {
-  1: 'text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-relaxed',
-  2: 'text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-relaxed',
-  3: 'text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-relaxed',
-  4: 'text-lg md:text-xl lg:text-2xl font-bold mb-4 leading-relaxed',
-  5: 'text-base md:text-lg lg:text-xl font-bold mb-4 leading-relaxed',
-  6: 'text-sm md:text-base lg:text-lg font-bold mb-4 leading-relaxed',
+// h1/h2 use the display serif (set globally in index.css) with tight leading.
+// h3-h6 stay in the sans UI font for labels and sub-sections.
+const headingStyles: Record<number, string> = {
+  1: 'font-display text-4xl md:text-5xl font-semibold mb-4 leading-[1.05] tracking-tight',
+  2: 'font-display text-3xl md:text-4xl font-semibold mb-4 leading-[1.1] tracking-tight',
+  3: 'text-xl md:text-2xl font-semibold mb-3 leading-snug',
+  4: 'text-lg md:text-xl font-semibold mb-3 leading-snug',
+  5: 'text-base md:text-lg font-semibold mb-2 leading-snug',
+  6: 'text-sm md:text-base font-semibold mb-2 leading-snug',
 };
 
 export function Heading({ level = 1, children, className }: HeadingProps) {
-  const baseClasses = headingStyles[level];
-  const combinedClasses = cn(baseClasses, className);
-
-  const HeadingTag = `h${level}`;
-
+  const HeadingTag = `h${level}` as keyof React.JSX.IntrinsicElements;
   return React.createElement(
     HeadingTag,
-    { className: combinedClasses },
+    { className: cn(headingStyles[level], className) },
     children
   );
 }

@@ -1,17 +1,32 @@
-# Sangguniang Bayan of Botolan
-# The legislative body of the municipality.
-# TODO: Add the names of the eight regular members after confirming with the Sangguniang Bayan Secretary.
-layout: list
-title: 'Sangguniang Bayan of Botolan'
-description: 'The Sangguniang Bayan is the legislative council of the municipality. It passes ordinances and resolutions, approves the municipal budget, and makes local policy. Its sessions are generally open to the public. Under the Local Government Code, a municipality has the Vice Mayor as presiding officer, eight regular members, and ex officio members.'
+# Sangguniang Bayan of Botolan (2025-2028 term)
+# Source: vm-sbbotolan.com (members + committees). Verify with the SB Secretary.
+layout: grid
+title: 'Sangguniang Bayan of Botolan (2025-2028)'
+description: 'The Sangguniang Bayan is the legislative council of the municipality. It enacts ordinances and resolutions, approves the municipal budget, and sets local policy. The Vice Mayor presides. Committees each member chairs are shown.'
 pages:
-  - name: 'Presiding Officer: Vice Mayor Atty. Edmund Dante D. Perez'
-    description: 'The Vice Mayor presides over sessions of the Sangguniang Bayan.'
-  - name: 'Eight regular members (Sangguniang Bayan members or councilors)'
-    description: 'Elected by the voters of Botolan every three years. The names of the current members are to be confirmed with the Sangguniang Bayan Secretary.'
-  - name: 'Ex officio member: President of the Liga ng mga Barangay (Botolan chapter)'
-    description: 'Represents the 31 barangays of Botolan in the Sangguniang Bayan.'
-  - name: 'Ex officio member: President of the Sangguniang Kabataan Federation'
-    description: 'Represents the youth of Botolan in the Sangguniang Bayan.'
-  - name: 'Indigenous Peoples Mandatory Representative (IPMR)'
-    description: 'Represents indigenous cultural communities in Botolan in the Sangguniang Bayan.'
+  - name: 'Hon. Atty. Edmund Dante D. Perez — Vice Mayor (Presiding Officer)'
+    description: 'Chairs: Finance, Budget, Appropriations, Ways and Means. Presides over all SB sessions.'
+  - name: 'Hon. Doris D. Ladines — SB Member'
+    description: 'Chairs: Environmental Protection; Infrastructure, Public Utilities and Facilities; Women and Family.'
+  - name: 'Hon. Eddie D. Daos — SB Member'
+    description: 'Chairs: Education; Ethics, Public Accountability and Good Governance.'
+  - name: 'Hon. Lance D. Lim — SB Member'
+    description: 'Chairs: Games and Amusement; Justice and Human Rights.'
+  - name: 'Hon. Angel B. Diesta — SB Member'
+    description: 'Chairs: Labor and Employment; Tourism and Cultural Affairs.'
+  - name: 'Hon. Jay T. Dilag — SB Member'
+    description: 'Chairs: Market, Trade and Industry; Transportation and Communications.'
+  - name: 'Hon. Dr. Fernando D. Igrobay — SB Member'
+    description: 'Chairs: Health and Social Services; Housing and Land Utilization; Rules and Privileges.'
+  - name: 'Hon. Arthur R. Daria — SB Member'
+    description: 'Chairs: Agriculture; People''s Law Enforcement Board; Senior Citizens Affairs.'
+  - name: 'Hon. Gregorio D. Jaring — SB Member'
+    description: 'Chairs: Cooperatives; Local Disaster Risk Reduction Management.'
+  - name: 'Hon. Ladie M. De Leon — SB Member'
+    description: 'Serves on Agriculture, Barangay Affairs, Housing and Land Utilization and others; co-listed for Indigenous People.'
+  - name: 'Hon. Fernando D. Onate Jr. — Ex-officio (Liga ng mga Barangay / ABC President)'
+    description: 'Chairs: Barangay Affairs; Peace, Order and Security. Represents the 31 barangays.'
+  - name: 'Hon. Ramon C. Abejon — Ex-officio (IPMR)'
+    description: 'Co-listed as chair of Indigenous People. Represents indigenous cultural communities.'
+  - name: 'Hon. Jessa Nicole B. Jaring — Ex-officio (SK Federation President)'
+    description: 'Chairs: Youth and Sports Development. Represents the youth of Botolan.'

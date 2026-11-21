@@ -2,8 +2,6 @@
  * Utility to load markdown content dynamically based on slug
  */
 
-// Botolan-wide values ({SHORT_NAME}, {MHO_WHERE}, ...) shared by every page.
-// Edit content/botolan.json to fill in details as you verify them.
 import botolanVars from '../../content/botolan.json';
 
 /**
@@ -77,16 +75,11 @@ export async function loadMarkdownContent(
   }
 }
 
-/**
- * Loads a standalone page from content/pages/<slug>.md (About, Contact, ...).
- */
 export async function loadStaticPage(slug: string): Promise<MarkdownContent> {
   const module = await import(`../../content/pages/${slug}.md?raw`);
   const content = interpolate(module.default, botolanVars);
-
   const titleMatch = content.match(/^#\s+(.+)$/m);
   const descriptionMatch = content.match(/^#\s+.+$\n\n(.+?)(?:\n\n|$)/s);
-
   return {
     content,
     title: titleMatch ? titleMatch[1] : undefined,

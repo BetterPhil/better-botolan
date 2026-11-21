@@ -10,12 +10,7 @@ import { createMarkdownComponents } from '../lib/markdownComponents';
 import { getTypographyTheme } from '../lib/typographyThemes';
 import { loadStaticPage, type MarkdownContent } from '../lib/markdownLoader';
 
-interface StaticPageProps {
-  /** File name in content/pages/ without .md */
-  slug: string;
-}
-
-export default function StaticPage({ slug }: StaticPageProps) {
+export default function StaticPage({ slug }: { slug: string }) {
   const [page, setPage] = useState<MarkdownContent | null>(null);
   const [error, setError] = useState<string | null>(null);
   const components = createMarkdownComponents(getTypographyTheme('default'));
@@ -41,7 +36,6 @@ export default function StaticPage({ slug }: StaticPageProps) {
       </Section>
     );
   }
-
   if (!page) {
     return (
       <Section className="p-3 mb-12">
@@ -49,7 +43,6 @@ export default function StaticPage({ slug }: StaticPageProps) {
       </Section>
     );
   }
-
   return (
     <>
       <SEO title={page.title || slug} description={page.description} />

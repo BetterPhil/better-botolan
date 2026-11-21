@@ -1,7 +1,5 @@
 # Local Government Activity Data
-# Only categories that have content are listed, so no link leads to an empty page.
-# Add News, Reports, Public Consultations, etc. here once you have real pages for them.
-
+# Only categories that have real content are listed, so no link leads to an empty page.
 categories:
   - category: 'Municipal Government'
     slug: 'departments'

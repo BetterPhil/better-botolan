@@ -16,6 +16,10 @@ const navItems: NavigationItem[] = [
   ...mainNavigation,
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Barangays', href: '/barangays' },
+  { label: 'Schools', href: '/schools' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Transparency', href: '/transparency' },
 ];
 
 function topSegment(href: string) {

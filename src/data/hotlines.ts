@@ -16,11 +16,8 @@ export interface Hotline {
 }
 
 /**
- * Emergency hotlines shown in the top bar.
- *
- * TODO: Fill in Botolan's numbers from official sources (the MDRRMO,
- * the municipal police station, the fire station, and the Rural Health
- * Unit). Do not publish a number you have not confirmed.
+ * Emergency hotlines for the top bar.
+ * TODO: fill in Botolan's verified numbers (MDRRMO, police, fire, RHU).
  */
 export const emergencyHotlines: Hotline[] = [
   { label: '911 National', number: '911', icon: Phone },

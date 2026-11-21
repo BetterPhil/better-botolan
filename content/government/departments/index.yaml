@@ -1,10 +1,7 @@
-# Department Pages
-# This file lists the pages available under Municipal Government
-
 pages:
   - name: 'Mayor and Vice Mayor (Executive)'
     slug: 'executive'
-    description: 'Meet the current Mayor and Vice Mayor of Botolan and learn what the executive branch of the municipal government does.'
+    description: 'Meet the current Mayor and Vice Mayor of Botolan and what the executive branch does.'
   - name: 'Sangguniang Bayan (Legislative)'
     slug: 'legislative'
-    description: 'The Sangguniang Bayan is the legislative council of Botolan. It enacts local ordinances and resolutions, and the Vice Mayor serves as its presiding officer.'
+    description: 'The Sangguniang Bayan is the legislative council of Botolan. The Vice Mayor presides; it enacts local ordinances and resolutions.'

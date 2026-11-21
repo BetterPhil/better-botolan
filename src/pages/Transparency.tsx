@@ -14,6 +14,11 @@ import { Text } from '../components/ui/Text';
 import SEO from '../components/SEO';
 import { siteConfig } from '../config/site';
 import { BUDGET_SITE } from '../lib/budgetApi';
+import {
+  recentResolutions,
+  RESOLUTIONS_SOURCE,
+  RESOLUTIONS_TOTAL,
+} from '../data/resolutions';
 
 export default function Transparency() {
   return (
@@ -58,27 +63,25 @@ export default function Transparency() {
             </Link>
           </article>
 
-          {/* Ordinances: placeholder until collected */}
-          <article className="rounded-xl border border-gray-200 border-t-4 border-t-gray-300 bg-white p-6">
-            <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 text-gray-600">
+          {/* Ordinances & resolutions: live sample below */}
+          <article className="rounded-xl border border-gray-200 border-t-4 border-t-primary-600 bg-white p-6">
+            <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary-50 text-primary-700">
               <ScrollText className="h-6 w-6" aria-hidden="true" />
             </span>
             <h2 className="text-lg font-semibold text-gray-900">
               Ordinances &amp; resolutions
             </h2>
             <p className="mt-2 text-sm text-gray-700">
-              Local laws passed by the Sangguniang Bayan. This section is being
-              built. If you have copies of Botolan ordinances, please help us
-              add them.
+              Local laws and resolutions passed by the Sangguniang Bayan. A
+              recent sample is listed below; the full official register has{' '}
+              {RESOLUTIONS_TOTAL} records.
             </p>
             <a
-              href={`${siteConfig.repoUrl}/issues`}
-              target="_blank"
-              rel="noreferrer"
+              href="#resolutions"
               className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary-600 hover:text-primary-700"
             >
-              Contribute ordinances
-              <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              See recent resolutions
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
           </article>
 
@@ -111,6 +114,51 @@ export default function Transparency() {
             </p>
           </article>
         </div>
+
+        <section id="resolutions" className="mt-12">
+          <h2 className="text-xl font-bold text-gray-900">
+            Recent Sangguniang Bayan resolutions
+          </h2>
+          <p className="mt-2 max-w-3xl text-sm text-gray-600">
+            A recent sample from the official register, which lists{' '}
+            {RESOLUTIONS_TOTAL} records across Series 2001-2026. Titles are
+            summarized; open the official register for the full text of each.
+          </p>
+          <ul className="mt-6 space-y-3">
+            {recentResolutions.map(res => (
+              <li
+                key={res.number}
+                className="rounded-xl border border-gray-200 bg-white p-5"
+              >
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="font-semibold text-gray-900">{res.number}</h3>
+                  <span className="text-sm text-gray-500">
+                    {new Date(res.date).toLocaleDateString('en-PH', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-gray-700">{res.summary}</p>
+                {res.vote && (
+                  <p className="mt-2 text-xs font-medium text-primary-700">
+                    {res.vote}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+          <a
+            href={RESOLUTIONS_SOURCE}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary-600 hover:text-primary-700"
+          >
+            View the full official register
+            <ExternalLink className="h-4 w-4" aria-hidden="true" />
+          </a>
+        </section>
 
         <div className="mt-8 rounded-xl bg-gray-50 p-6">
           <h2 className="text-base font-semibold text-gray-900">
