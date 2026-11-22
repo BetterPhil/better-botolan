@@ -45,7 +45,7 @@ export default function Hero() {
         </p>
 
         <h1 className="mx-auto max-w-4xl text-4xl md:text-6xl font-bold tracking-tight leading-tight">
-          Public Information for {siteConfig.shortName}, Made Easier to Use.
+          Public Information for {siteConfig.shortName}, Malighay Panlumateng.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl text-primary-100">

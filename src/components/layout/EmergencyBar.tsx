@@ -1,6 +1,6 @@
 import { ArrowRight, TriangleAlert } from 'lucide-react';
 import { emergencyHotlines } from '../../data/hotlines';
-import { siteConfig } from '../../config/site';
+import { Link } from 'react-router';
 
 export default function EmergencyBar() {
   const hotlines = emergencyHotlines.filter(h => h.number.trim() !== '');
@@ -28,15 +28,13 @@ export default function EmergencyBar() {
           ))}
         </ul>
 
-        <a
-          href={siteConfig.nationalHotlinesUrl}
-          target="_blank"
-          rel="noreferrer"
+        <Link
+          to="/hotlines"
           className="hidden md:flex items-center gap-1 font-semibold shrink-0 hover:underline"
         >
           View all hotlines
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </a>
+        </Link>
       </div>
     </div>
   );

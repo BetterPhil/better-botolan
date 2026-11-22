@@ -59,7 +59,7 @@ export default function Navbar() {
               onClick={closeMenu}
             >
               <img
-                src="/logo-mark.svg"
+                src="/botolan.png"
                 alt=""
                 className="h-12 w-12"
                 width={48}

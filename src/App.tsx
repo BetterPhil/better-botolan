@@ -7,8 +7,10 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import StaticPage from './pages/StaticPage';
+import About from './pages/About';
 import Schools from './pages/Schools';
 import Barangays from './pages/Barangays';
+import Hotlines from './pages/Hotlines';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import Projects from './pages/Projects';
@@ -44,11 +46,9 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/transparency" element={<Transparency />} />
               <Route path="/barangays" element={<Barangays />} />
+              <Route path="/hotlines" element={<Hotlines />} />
               <Route path="/schools" element={<Schools />} />
-              <Route
-                path="/about"
-                element={<StaticPage key="about" slug="about" />}
-              />
+              <Route path="/about" element={<About />} />
               <Route
                 path="/contact"
                 element={<StaticPage key="contact" slug="contact" />}

@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <div className="mb-4 flex items-center gap-3">
               <img
-                src="/logo-mark.svg"
+                src="/botolan.png"
                 alt=""
                 width={48}
                 height={48}

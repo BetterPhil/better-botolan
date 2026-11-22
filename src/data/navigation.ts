@@ -22,7 +22,7 @@ export const mainNavigation: NavigationItem[] = [
     })),
   },
   {
-    label: 'Government',
+    label: 'Officials',
     href: '/government/departments',
   },
 ];
