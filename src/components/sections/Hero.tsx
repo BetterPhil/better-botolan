@@ -34,7 +34,7 @@ export default function Hero() {
         className="absolute inset-0 z-10"
         style={{
           backgroundImage:
-            'linear-gradient(to bottom, rgba(61,6,16,0.7), rgba(77,10,28,0.5) 45%, rgba(61,6,16,0.8)), url(/images/pinatubo.jpg)',
+            'linear-gradient(to bottom, rgba(1, 92, 16, 0.7), rgba(2, 86, 60, 0.5) 45%, rgba(30, 75, 70, 0.8)), url(/images/pinatubo.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

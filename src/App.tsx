@@ -10,6 +10,7 @@ import StaticPage from './pages/StaticPage';
 import About from './pages/About';
 import Schools from './pages/Schools';
 import Barangays from './pages/Barangays';
+import BarangayDetail from './pages/BarangayDetail';
 import Hotlines from './pages/Hotlines';
 import Government from './pages/Government';
 import Search from './pages/Search';
@@ -46,6 +47,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/transparency" element={<Transparency />} />
               <Route path="/barangays" element={<Barangays />} />
+              <Route path="/barangays/:slug" element={<BarangayDetail />} />
               <Route path="/hotlines" element={<Hotlines />} />
               <Route path="/schools" element={<Schools />} />
               <Route path="/about" element={<About />} />
