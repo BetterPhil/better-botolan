@@ -12,6 +12,7 @@ import Schools from './pages/Schools';
 import Barangays from './pages/Barangays';
 import BarangayDetail from './pages/BarangayDetail';
 import Hotlines from './pages/Hotlines';
+import DisclaimerModal from './components/ui/DisclaimerModal';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import Projects from './pages/Projects';
@@ -25,6 +26,7 @@ function App() {
       <Router>
         <NuqsAdapter>
           <div className="min-h-screen flex flex-col">
+            <DisclaimerModal />
             <Navbar />
             <ScrollToTop />
             <Routes>
