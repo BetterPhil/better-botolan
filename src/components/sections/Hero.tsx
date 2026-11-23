@@ -33,7 +33,9 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute inset-0"
         style={{
-          backgroundImage: 'url(/images/pinatubo-hero.svg)',
+          background:
+            'linear-gradient(to bottom, rgba(61,6,16,0.85), rgba(77,10,28,0.65) 45%, rgba(61,6,16,0.9))',
+          backgroundImage: 'url(/images/pinatubo.jpg)', // your photo
           backgroundSize: 'cover',
           backgroundPosition: 'center bottom',
         }}
