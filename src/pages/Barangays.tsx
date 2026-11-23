@@ -1,9 +1,10 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
-import { MapPin, Search, Users, ArrowRight } from 'lucide-react';
+import { Search, Users, ArrowRight } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { SectionHeading } from '../components/ui/SectionHeading';
+import BarangayLogo from '../components/barangays/BarangayLogo';
 import SEO from '../components/SEO';
 import { siteConfig } from '../config/site';
 import {
@@ -135,22 +136,29 @@ export default function Barangays() {
                 <li key={b.slug}>
                   <Link
                     to={`/barangays/${b.slug}`}
-                    className="group block h-full rounded-xl border border-gray-200 bg-white p-5 shadow-[var(--bb-shadow-card)] transition hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-[var(--bb-shadow-lift)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                    className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-[var(--bb-shadow-card)] transition hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-[var(--bb-shadow-lift)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                   >
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="flex items-center gap-2 font-semibold text-gray-900 group-hover:text-primary-700">
-                        <MapPin
-                          className="h-4 w-4 shrink-0 text-primary-600"
-                          aria-hidden="true"
-                        />
-                        {b.name}
-                      </h3>
-                      {b.poblacion && (
-                        <span className="rounded-full bg-secondary-50 px-2 py-0.5 text-xs font-medium text-secondary-700">
-                          Poblacion
-                        </span>
-                      )}
+                    <div className="flex items-center gap-3">
+                      <BarangayLogo slug={b.slug} name={b.name} size={48} />
+                      <div className="min-w-0 flex-1">
+                        <h3 className="truncate font-semibold text-gray-900 group-hover:text-primary-700">
+                          {b.name}
+                        </h3>
+                        <div className="mt-1 flex flex-wrap gap-1.5">
+                          {b.poblacion && (
+                            <span className="rounded-full bg-secondary-50 px-2 py-0.5 text-[11px] font-medium text-secondary-700">
+                              Poblacion
+                            </span>
+                          )}
+                          {b.history && b.history.length > 0 && (
+                            <span className="rounded-full bg-primary-50 px-2 py-0.5 text-[11px] font-medium text-primary-700">
+                              History
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
+
                     <div className="mt-4 flex items-end justify-between">
                       <div>
                         <div className="flex items-center gap-1.5 text-xs text-gray-500">
@@ -163,8 +171,10 @@ export default function Barangays() {
                       </div>
                       {g !== null && (
                         <span
-                          className={`text-xs font-medium ${
-                            g >= 0 ? 'text-green-700' : 'text-gray-500'
+                          className={`rounded-full px-2 py-0.5 text-xs font-semibold ${
+                            g >= 0
+                              ? 'bg-green-50 text-green-700'
+                              : 'bg-gray-100 text-gray-500'
                           }`}
                           title="Change from 2015 to 2020"
                         >
@@ -173,6 +183,7 @@ export default function Barangays() {
                         </span>
                       )}
                     </div>
+
                     <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3">
                       <span className="text-xs font-medium text-gray-400">
                         {b.history && b.history.length > 0

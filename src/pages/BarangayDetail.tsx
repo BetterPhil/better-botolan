@@ -4,7 +4,6 @@ import {
   BookOpen,
   ExternalLink,
   Github,
-  MapPin,
   ScrollText,
   TrendingDown,
   TrendingUp,
@@ -16,6 +15,7 @@ import { Heading } from '../components/ui/Heading';
 import SEO from '../components/SEO';
 import { Banner } from '@bettergov/kapwa/banner';
 import { getBarangay, BARANGAY_SOURCE } from '../data/barangays';
+import BarangayLogo from '../components/barangays/BarangayLogo';
 import { siteConfig } from '../config/site';
 
 const numberFmt = new Intl.NumberFormat('en-PH');
@@ -74,9 +74,7 @@ export default function BarangayDetail() {
         {/* Header */}
         <div className="mb-8 rounded-2xl border border-gray-200 bg-gradient-to-br from-primary-50 to-white p-6 sm:p-8">
           <div className="flex items-start gap-4">
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary-600 text-white shadow-[var(--bb-shadow-card)]">
-              <MapPin className="h-7 w-7" aria-hidden="true" />
-            </span>
+            <BarangayLogo slug={barangay.slug} name={barangay.name} size={64} />
             <div>
               <span className="bb-kicker">Barangay</span>
               <Heading level={1} className="mt-2 mb-0">

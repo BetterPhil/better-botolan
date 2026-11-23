@@ -117,7 +117,7 @@ export const barangays: Barangay[] = [
   },
   {
     name: 'Capayawan',
-    slug: 'capayawan',
+    slug: 'capayawan.jpg',
     population2020: 1187,
     population2015: 1010,
   },

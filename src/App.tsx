@@ -7,6 +7,8 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import StaticPage from './pages/StaticPage';
+import Tourism from './pages/Tourism';
+import Statistics from './pages/Statistics';
 import About from './pages/About';
 import Schools from './pages/Schools';
 import Barangays from './pages/Barangays';
@@ -17,6 +19,9 @@ import Government from './pages/Government';
 import Search from './pages/Search';
 import Projects from './pages/Projects';
 import Transparency from './pages/Transparency';
+import FullDisclosure from './pages/FullDisclosure';
+import CitizensCharter from './pages/CitizensCharter';
+import Directory from './pages/Directory';
 import { isMeilisearchEnabled } from './lib/meilisearch';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 
@@ -39,6 +44,8 @@ function App() {
               />
               <Route path="/government/:category" element={<Government />} />
               <Route path="/government" element={<Government />} />
+              <Route path="/citizens-charter" element={<CitizensCharter />} />
+              <Route path="/directory" element={<Directory />} />
               <Route
                 path="/government/:category/:documentSlug"
                 element={<Document categoryType="government" />}
@@ -48,6 +55,9 @@ function App() {
               )}
               <Route path="/projects" element={<Projects />} />
               <Route path="/transparency" element={<Transparency />} />
+              <Route path="/full-disclosure" element={<FullDisclosure />} />
+              <Route path="/tourism" element={<Tourism />} />
+              <Route path="/statistics" element={<Statistics />} />
               <Route path="/barangays" element={<Barangays />} />
               <Route path="/barangays/:slug" element={<BarangayDetail />} />
               <Route path="/hotlines" element={<Hotlines />} />
