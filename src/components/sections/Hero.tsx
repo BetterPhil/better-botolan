@@ -31,17 +31,16 @@ export default function Hero() {
       {/* Mount Pinatubo backdrop (public/images/pinatubo-hero.svg) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0"
+        className="absolute inset-0 z-10"
         style={{
-          background:
-            'linear-gradient(to bottom, rgba(61,6,16,0.85), rgba(77,10,28,0.65) 45%, rgba(61,6,16,0.9))',
-          backgroundImage: 'url(/images/pinatubo.jpg)', // your photo
+          backgroundImage:
+            'linear-gradient(to bottom, rgba(61,6,16,0.7), rgba(77,10,28,0.5) 45%, rgba(61,6,16,0.8)), url(/images/pinatubo.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
+          backgroundPosition: 'center',
         }}
       />
 
-      <div className="relative container mx-auto px-4 py-16 md:py-24 text-center">
+      <div className="relative z-20 container mx-auto px-4 py-16 md:py-24 text-center">
         <p className="mb-6 font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-primary-100">
           {siteConfig.name}, {siteConfig.province}
         </p>
