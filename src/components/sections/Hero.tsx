@@ -1,9 +1,10 @@
 import { useState, type FormEvent } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import { ArrowRight, Search } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { siteConfig } from '../../config/site';
-import { isMeilisearchEnabled } from '../../lib/meilisearch';
+import { isSearchEnabled } from '../../lib/clientSearch';
+import { useSearchModal } from '../../context/SearchModalContext';
 import { serviceCategories } from '../../data/yamlLoader';
 
 // TODO (Part 4/5): add "Explore Projects" and "View Statistics" once built.
@@ -15,15 +16,14 @@ const quickActions = [
 
 export default function Hero() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const { openSearch } = useSearchModal();
   const [query, setQuery] = useState('');
 
   const topics = serviceCategories.categories.slice(0, 6);
 
   const handleSearch = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const q = query.trim();
-    if (q) navigate(`/search?q=${encodeURIComponent(q)}`);
+    openSearch(query.trim());
   };
 
   return (
@@ -53,7 +53,7 @@ export default function Hero() {
           {t('hero.subtitle')}
         </p>
 
-        {isMeilisearchEnabled ? (
+        {isSearchEnabled ? (
           <form
             onSubmit={handleSearch}
             role="search"

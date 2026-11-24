@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CalendarDays, ExternalLink, MapPin } from 'lucide-react';
 import { siteConfig } from '../../config/site';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 const formatter = new Intl.DateTimeFormat('en-PH', {
   timeZone: 'Asia/Manila',
@@ -24,7 +25,7 @@ export default function UtilityBar() {
   const now = useNow();
 
   return (
-    <div className="bg-white border-b border-gray-200 text-sm text-gray-700">
+    <div className="relative z-[60] bg-white border-b border-gray-200 text-sm text-gray-700">
       <div className="container mx-auto px-4 flex items-center justify-between h-10">
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-2">
@@ -42,10 +43,13 @@ export default function UtilityBar() {
           </a>
         </div>
 
-        <span className="hidden sm:flex items-center gap-2">
-          <CalendarDays className="h-4 w-4" aria-hidden="true" />
-          {formatter.format(now)} PHT
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="hidden sm:flex items-center gap-2">
+            <CalendarDays className="h-4 w-4" aria-hidden="true" />
+            {formatter.format(now)} PHT
+          </span>
+          <LanguageSwitcher />
+        </div>
       </div>
     </div>
   );

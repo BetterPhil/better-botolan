@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
 import { ChevronDown, Search } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
-import { isMeilisearchEnabled } from '../../lib/meilisearch';
+import { isSearchEnabled } from '../../lib/clientSearch';
+import { useSearchModal } from '../../context/SearchModalContext';
 import { siteConfig } from '../../config/site';
 import { cn } from '../../lib/utils';
 import type { NavigationItem } from '../../types';
@@ -17,6 +18,7 @@ const navItems: NavigationItem[] = [
   { label: 'Barangays', href: '/barangays' },
   { label: 'Schools', href: '/schools' },
   { label: 'Tourism', href: '/tourism' },
+  { label: 'Events', href: '/events' },
   {
     label: 'Transparency',
     href: '/transparency',
@@ -40,6 +42,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const { pathname } = useLocation();
+  const { openSearch } = useSearchModal();
 
   const isActive = (item: NavigationItem) =>
     item.href === '/'
@@ -125,14 +128,15 @@ export default function Navbar() {
                 </div>
               ))}
 
-              {isMeilisearchEnabled && (
-                <Link
-                  to="/search"
+              {isSearchEnabled && (
+                <button
+                  type="button"
+                  onClick={() => openSearch()}
                   aria-label="Search"
                   className="ml-2 rounded-lg p-2 text-gray-700 hover:bg-gray-50 hover:text-primary-600"
                 >
                   <Search className="h-5 w-5" aria-hidden="true" />
-                </Link>
+                </button>
               )}
             </div>
 
@@ -251,14 +255,17 @@ export default function Navbar() {
                 </div>
               ))}
 
-              {isMeilisearchEnabled && (
-                <Link
-                  to="/search"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-3 py-2 font-medium text-gray-700 hover:bg-gray-50"
+              {isSearchEnabled && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    closeMenu();
+                    openSearch();
+                  }}
+                  className="block w-full text-left rounded-lg px-3 py-2 font-medium text-gray-700 hover:bg-gray-50"
                 >
                   Search
-                </Link>
+                </button>
               )}
             </div>
           </div>

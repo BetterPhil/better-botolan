@@ -1,98 +1,48 @@
-# Go to the Local Hospital for Treatment or Confinement — Lapu-Lapu City
+# Go to the Hospital for Treatment or Confinement
 
-This guide covers **where to go**, **what to bring**, and **how admission works** at local hospitals in Lapu-Lapu City, including the city-run facility and nearby private hospitals.
+Where to go for hospital care in Botolan, and how admission works.
 
----
-
-## A) Government Hospital (City-Run)
-
-### Sta. Rosa Community Hospital (Lapu-Lapu City)
-
-**Services & Hours**
-
-- **Emergency (Medical & Medico-legal):** 24/7
-- **Ward (In-patient confinement):** 24/7
-- **Out-Patient:** Mon–Fri, 8:00 AM–5:00 PM (except holidays)
-
-**Emergency (Medical cases) – Quick Steps**
-| Step | What you do | Hospital does | Typical time |
-|---|---|---|---|
-| 1 | Seek care at ER | Triage, vitals, initial MD orders | ~10–25 min |
-| 2 | Sign consent (treatment/admission if needed) | Prepare meds/tests; set for transfer to ward if admitted | ~20–25 min |
-| 3 | Transfer to ward (if for confinement) | ER endorses to Ward Nurse on duty | ~10 min |
-
-**Requirements (bring if available):** Registration data sheet (onsite), **PhilHealth ID/MDR (optional)**, doctor’s referral/admitting orders (if coming from clinic).
-
-**Ward (In-patient) – What to expect**
-
-- Follow doctor’s orders; nurses administer meds/tests; dietary issued as ordered.
-- For discharge: instructions & schedule for follow-ups are given; proceed to Billing for clearance; release at Ward/Nurse station.
-- **Fees:** Posted at Billing.
-- **Note:** If not enrolled in PhilHealth, staff will guide processing if a relative can provide documents.
+> **Please note:** This guide explains how this service generally works under Philippine law. Details specific to Botolan are marked **To be confirmed** until verified with the Municipal Government. Please call or visit the office before you go.
 
 ---
 
-## B) Private Hospitals Nearby
+## Who it is for
 
-| Hospital                                     | Where                 | Beds/Notes                            | Admissions basics                                                                                                                     |
-| -------------------------------------------- | --------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mactan Doctors’ Hospital (CebuDoc Group)** | Basak, Lapu-Lapu City | **151-bed tertiary** private hospital | Bring valid ID; company/HMO authorization if applicable; PhilHealth forms; fill out admission forms and submit to Admissions/Billing. |
-| **ARC Hospitals**                            | Lapu-Lapu City        | **~100-bed** private hospital         | Standard private-hospital admission flow; coordinate with Admissions/HMO/PhilHealth desk.                                             |
+- Anyone who needs emergency care, treatment or confinement.
 
-> Private hospitals typically require **initial deposits** (varies by case/room) unless fully covered by HMO/PhilHealth arrangements. Confirm at the **Billing/Admissions** desk.
+## How it works
 
----
+1. **In an emergency, call 911** or go to the nearest hospital.
+2. **Local government hospital:** **{HOSPITAL_NAME}** at **{HOSPITAL_WHERE}**.
+3. **Register at admitting** and show your ID and PhilHealth number.
+4. **Ask about financial help** at the PhilHealth desk or Medical Social Worker.
+5. **For care the local hospital can't provide,** you may be referred to a larger hospital in Iba or Olongapo.
 
-## C) What to Bring (All Hospitals)
+## What to bring
 
-- **Valid ID** (with photo & signature)
-- **PhilHealth** ID and **MDR** (Member Data Record); if a dependent, bring proof of dependency
-- **Doctor’s referral/admitting order** (if elective admission)
-- **HMO/Company**: LOA/guarantee letter, membership/ID cards (if applicable)
-- **Personal necessities** (for confinement)
+- Valid ID
+- PhilHealth ID or Member Data Record
+- Referral from the RHU if any
+- Medical records or past test results
 
----
+## Where to go in Botolan
 
-## D) Costs & PhilHealth Coverage
+| Detail           | Information        |
+| ---------------- | ------------------ |
+| **Office**       | {HOSPITAL_NAME}    |
+| **Location**     | {HOSPITAL_WHERE}   |
+| **Contact**      | {HOSPITAL_CONTACT} |
+| **Office hours** | {OFFICE_HOURS}     |
 
-- **City hospital:** Fees are posted at **Billing**; **PhilHealth** benefits may apply at admission/discharge processing.
-- **No Balance Billing (NBB):** For **indigent/sponsored**, **senior citizens**, and certain categories in **government hospitals**, no other fees beyond PhilHealth package should be charged during confinement (subject to policy and facility capacity).
+## Legal basis
 
----
+- **Republic Act No. 11223** (Universal Health Care Act).
+- **Republic Act No. 8344**: hospitals may not refuse emergency patients.
 
-## E) How to Avail — At a Glance
+## Tips
 
-### Emergency (any hospital)
+- Ask the hospital which PhilHealth benefit packages it currently offers before you go.
 
-1. **Go straight to ER** (24/7).
-2. **Triage & initial orders** → stabilization/tests.
-3. **If admitted:** sign consent → transfer to ward → submit IDs/PhilHealth/HMO at Admissions/Billing.
+## Useful links
 
-### Elective Admission (planned confinement/procedure)
-
-1. Obtain **doctor’s admitting order** & **referral**.
-2. Prepare **IDs, PhilHealth, HMO/LOA** (if any).
-3. Proceed to **Admissions** for room assignment, forms, and initial billing arrangements.
-
----
-
-## F) Useful Contacts
-
-- **Lapu-Lapu City Hospital / District Hospital (Gov’t)**
-  - A. Tumulak St., Gun-ob, Lapu-Lapu City
-  - **Tel:** (032) 340-0249 / 340-0248
-  - **Email:** lapulapucityhospital@yahoo.com
-
-- **Mactan Doctors’ Hospital (Private, CebuDoc Group)**
-  - Basak, Lapu-Lapu City
-  - **Trunkline:** +63 (32) 239-7002 to 7016
-
-- **ARC Hospitals (Private)**
-  - Lapu-Lapu City (100-bed facility)
-
----
-
-### Notes
-
-- Bring your **PhilHealth** documents even for emergencies; if unavailable, the hospital can guide you on follow-up submission.
-- Schedules and processes can change; confirm by calling the hospital **Admissions/Billing** desk before a planned confinement.
+- [PhilHealth](https://www.philhealth.gov.ph)

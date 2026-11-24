@@ -19,6 +19,7 @@ export const LANGUAGES: Record<LanguageType, LanguageInfo> = {
   mag: { code: 'mag', name: 'Maguindanao', nativeName: 'Maguindanaon' },
   tsg: { code: 'tsg', name: 'Tausug', nativeName: 'Bahasa Sūg' },
   mdh: { code: 'mdh', name: 'Maranao', nativeName: 'Meranaw' },
+  sbl: { code: 'sbl', name: 'Sambal', nativeName: 'Sambali (Botolan)' },
 };
 
 export const DEFAULT_LANGUAGE: LanguageType = 'en';

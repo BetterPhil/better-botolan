@@ -1,67 +1,44 @@
-# Request Special Collection Services for Hazardous Waste & E-Waste — Lapu-Lapu City
+# Special Waste Collection: Hazardous Materials and Electronics
 
-Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The City Environment and Natural Resources Office (CENRO) and barangays coordinate **special collection drives** and drop-off services for these items.
+What to do with dangerous waste and old electronics in Botolan.
 
----
-
-## 1) What Counts as Hazardous & E-Waste?
-
-| Category                       | Examples                                                                           | Notes                                                       |
-| ------------------------------ | ---------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **Household Hazardous Waste**  | Batteries, fluorescent bulbs, used paints/solvents, pesticides, cleaning chemicals | Toxic and can pollute soil/water                            |
-| **Electronic Waste (E-Waste)** | Old cellphones, computers, printers, TVs, chargers, cables                         | May contain lead, mercury, cadmium                          |
-| **Medical Waste (Household)**  | Used syringes, sharps, soiled bandages                                             | Should be turned over to health centers for proper disposal |
+> **Please note:** This guide explains how this service generally works under Philippine law. Details specific to Botolan are marked **To be confirmed** until verified with the Municipal Government. Please call or visit the office before you go.
 
 ---
 
-## 2) How to Request Special Collection
+## Who it is for
 
-1. **Contact your Barangay Hall**
-   - Ask for the **Barangay Environment Committee** or Solid Waste desk.
-   - Provide details: type of waste, approximate volume, and your address.
+- Households and businesses with batteries, lamps, paint, chemicals, medical waste or old electronics.
 
-2. **Barangay forwards request to CENRO**
-   - CENRO schedules a **special truck pickup** or directs you to the next citywide collection event.
-   - Some barangays coordinate with **accredited junkshops/recyclers**.
+## How it works
 
-3. **Prepare items for pickup/drop-off**
-   - Store in sealed, clearly labeled containers or boxes.
-   - Do not mix hazardous waste with household garbage.
+1. **Do not mix** these with regular garbage and do not burn them.
+2. **Store them safely** in a closed container away from children.
+3. **Ask the MENRO or your barangay** about special collection drives or drop-off points.
+4. **Businesses** producing hazardous waste must follow DENR rules and use accredited handlers.
 
-4. **Follow the scheduled collection**
-   - Place items outside only when instructed, or bring them to the barangay/CENRO drop-off point.
+## What to bring
 
----
+- List of items to dispose of
 
-## 3) Other Disposal Options
+## Where to go in Botolan
 
-- **Barangay E-Waste Drives** — many barangays organize quarterly e-waste collection campaigns.
-- **School/NGO Drives** — occasionally schools or civic groups run e-waste donation drives in coordination with the City.
-- **Accredited Junkshops/Collectors** — some accept electronics for recycling; ask CENRO for the accredited list.
+| Detail           | Information     |
+| ---------------- | --------------- |
+| **Office**       | MENRO           |
+| **Location**     | {MENRO_WHERE}   |
+| **Contact**      | {MENRO_CONTACT} |
+| **Office hours** | {OFFICE_HOURS}  |
 
----
+## Legal basis
 
-## 4) Contact Information
+- **Republic Act No. 6969** (Toxic Substances and Hazardous Wastes Act).
+- **Republic Act No. 9003**.
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: [Lapu-Lapu City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+## Tips
 
-- **Barangay Halls** — Environment/Solid Waste desk for barangay-level pickup scheduling.
+- Keep original packaging and labels to help identify the material.
 
----
+## Useful links
 
-## 5) Tips for Households
-
-- Keep a **separate box** for batteries, bulbs, and small electronics.
-- Do not break bulbs or dismantle devices — this increases risk of contamination.
-- Join **barangay or school e-waste drives** regularly to avoid stockpiling.
-- Encourage neighbors to **bundle requests together** — barangays often schedule collection faster for group requests.
-
----
-
-### Reminder
-
-✅ Never dispose of hazardous waste or e-waste with your regular garbage.  
-✅ Always coordinate with your **Barangay Hall** or **CENRO** for proper and safe collection.
+- [DENR EMB](https://emb.gov.ph)

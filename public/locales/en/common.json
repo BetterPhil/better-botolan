@@ -1,9 +1,9 @@
 {
   "site_name": "Better Botolan",
-  "site_description": "A community-run portal for the Municipality of Botolan, Zambales",
+  "site_description": "A community-run portal for the Municipality of Botolan, Zambales.",
   "hero": {
-    "title": "Better Botolan",
-    "subtitle": "Find verified public services, government offices, contacts, and official information for Botolan, Zambales, all in one place.",
+    "title": "Welcome to Better Botolan",
+    "subtitle": "A community-run portal for information and services of the Municipality of Botolan, Zambales.",
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"
@@ -11,7 +11,7 @@
   "services": {
     "title": "Services & Information",
     "governmentServices": "Government Services",
-    "description": "Access official government services quickly and easily. Find what you need for citizenship, business, education, and more.",
+    "description": "Find information on local government services in Botolan — business permits, health, social welfare, agriculture, and more.",
     "viewAll": "View All Services",
     "viewAllCategory": "View All"
   },
@@ -29,7 +29,7 @@
     "title": "Latest News & Updates"
   },
   "footer": {
-    "copyright": "© 2026 Better Botolan. A community-run project, not an official website of the Municipality of Botolan. Content is public domain unless otherwise specified."
+    "copyright": "© 2026 Better Botolan — a community initiative. Not the official website of the Municipal Government of Botolan. All content is public domain unless otherwise specified."
   },
   "navbar": {
     "government": "Government",

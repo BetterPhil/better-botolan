@@ -72,14 +72,26 @@ export interface Festival {
 export const festivals: Festival[] = [
   {
     name: 'Feast of Ina Poon Bato',
-    when: 'January 23–24',
+    when: 'January 24',
     about:
-      'The feast of Ina Poon Bato at the Loob-Bunga shrine, drawing pilgrims from across the region. Aeta communities perform traditional dances.',
+      'The feast of Ina Poon Bato — “Apo Apang,” patroness of Botolan — celebrated every January 24 in Brgy. Poonbato. Devotees from across the country honour the miraculous image, housed atop a hill with a panoramic view.',
   },
   {
-    name: 'Pinatubo Festival',
-    when: 'Early May',
+    name: 'Mt. Pinatubo Festival',
+    when: 'May 4',
     about:
-      "Botolan's town festival celebrating its culture and heritage, with street dancing and local traditions. It is also known as the Pinatubo Festival.",
+      "Botolan's town festival celebrating the resilient, evolving way of life of the Botoleños after Mt. Pinatubo's eruption. It showcases the cultural heritage of the Aytas and their bond with Apo Namalyari, with street dancing and local traditions.",
+  },
+  {
+    name: 'Pasko ha Banowa',
+    when: 'December',
+    about:
+      'Botolan’s Christmas celebration (Pasko sa Bayan), honouring the town’s traditions, vibrant community spirit, and joyful holiday heritage with lights and festivities.',
+  },
+  {
+    name: 'Dinamulag (Mango) Festival',
+    when: 'April · province-wide',
+    about:
+      'A Province of Zambales festival celebrating the bountiful harvest of the sweet carabao (dinamulag) mango, with Botolan joining the provincial festivities and showcasing local produce and culture.',
   },
 ];

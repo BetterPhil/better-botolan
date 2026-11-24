@@ -1,65 +1,56 @@
-# How to Set Up a Business Partnership
+# Apply for a Barangay Clearance and Mayor's Business Permit
 
-## Step 1: Register with SEC
+How to get the clearances and permits you need to open a business in Botolan.
 
-**Prepare documents:**
+> **Please note:** This guide explains how this service generally works under Philippine law. Details specific to Botolan are marked **To be confirmed** until verified with the Municipal Government. Please call or visit the office before you go.
 
-- Partnership name (check via [SEC eSPARC](https://espac.sec.gov.ph/))
-- Notarized Articles of Partnership
-- IDs/TINs of partners, office address, capital structure
+---
 
-**File online** through [SEC eSPARC](https://espac.sec.gov.ph/) and pay fees.
+## Who it is for
 
-**Output:** SEC Certificate of Recording + Approved Business Name
+- Anyone starting a new business in Botolan: sole proprietors, partnerships, corporations and cooperatives.
+- Existing businesses moving to a new location or adding a new line of business.
 
-## Step 2: Apply for Business Permit
+## How it works
 
-Go to **Lapu-Lapu City BPLO** (Business Permit and Licensing Office).
+1. **Register your business name.** Sole proprietors register with the **DTI**; partnerships and corporations with the **SEC**; cooperatives with the **CDA**.
+2. **Get a Barangay Clearance** from the barangay where the business will operate.
+3. **Get a zoning (locational) clearance** to confirm your location is allowed there.
+4. **Prepare health and safety clearances** — usually a **Sanitary Permit** and a **Fire Safety Inspection Certificate (FSIC)** from the BFP.
+5. **Submit your application** to the Business Permits and Licensing Office (BPLO), which assesses your local business tax.
+6. **Pay at the Municipal Treasurer's Office** and claim your **Mayor's (Business) Permit**.
+7. **Register with the BIR** for your Certificate of Registration and receipts.
 
-**Requirements:**
+## What to bring
 
-- Unified Application Form
-- SEC Certificate of Registration + Articles of Partnership
-- Occupancy Permit (if owner) OR Lease Contract (if renting)
-- Community Tax Certificate (CTC)
+- BPLO application form
+- DTI, SEC or CDA registration
+- Valid government ID (and SPA if filing for someone else)
+- Proof of business location (lease, or title/tax declaration)
+- Barangay Clearance
+- Zoning, sanitary and fire safety clearances as required
 
-Apply in person or online via [Lapu-Lapu Online Business Permit Portal](https://businesspermit.lapulapucity.gov.ph/).
+## Where to go in Botolan
 
-> Note: Inspections may include zoning, sanitary, and fire safety checks.
+| Detail           | Information                                  |
+| ---------------- | -------------------------------------------- |
+| **Office**       | Business Permits and Licensing Office (BPLO) |
+| **Location**     | {BPLO_WHERE}                                 |
+| **Contact**      | {BPLO_CONTACT}                               |
+| **Office hours** | {OFFICE_HOURS}                               |
 
-## Step 3: Register with BIR
+## Legal basis
 
-File at the **BIR Revenue District Office (RDO)** where your office is located.
+- **Republic Act No. 7160** (Local Government Code): LGU power to tax and license businesses.
+- **Republic Act No. 11032** (Ease of Doing Business Act): 3/7/20 working-day limits for simple/complex/highly-technical transactions.
 
-- Fill out [BIR Form 1903](https://www.bir.gov.ph/images/1903%20Jan%202024.pdf)
-- Submit SEC Certificate + Articles of Partnership + valid IDs
-- Pay registration fee + Documentary Stamp Tax (DST)
+## Tips
 
-**Within 30 days of receiving BIR Certificate:**
+- Ask the BPLO for a checklist for your business type first; food and health businesses need extra clearances.
+- Keep photocopies of everything.
 
-- Apply for Authority to Print Receipts (Form 1906) OR enroll in e-invoicing
-- Register your Books of Accounts
+## Useful links
 
-## Step 4: Register as Employer (if hiring)
-
-Enroll with:
-
-- [SSS](https://www.sss.gov.ph/)
-- [PhilHealth](https://www.philhealth.gov.ph/)
-- [Pag-IBIG](https://www.pagibigfund.gov.ph/)
-
-## Process Flow
-
-1. SEC name check + register via [SEC eSPARC](https://espac.sec.gov.ph/)
-2. Secure Barangay Certification + site/lease documents
-3. Apply for Business Permit at [Lapu-Lapu BPLO](https://businesspermit.lapulapucity.gov.ph/)
-4. File BIR Form 1903 → apply ATP → register books
-
-## Document Checklist
-
-- [ ] SEC Articles of Partnership + SEC Certificate
-- [ ] Lease Contract OR Occupancy/Building docs
-- [ ] Lapu-Lapu BPLO Unified Application Form + CTC
-- [ ] BIR Form 1903, IDs, ATP/Books
-
-With these steps, your partnership in Lapu-Lapu City will be fully compliant and ready to operate!
+- [DTI Business Name Registration](https://bnrs.dti.gov.ph)
+- [SEC](https://www.sec.gov.ph)
+- [BIR](https://www.bir.gov.ph)

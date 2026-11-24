@@ -8,7 +8,16 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
+    // Sambal (sbl) is a scaffold: any key it is missing falls back to
+    // Filipino first, then English. English and Filipino fall back to English.
+    fallbackLng: {
+      sbl: ['fil', 'en'],
+      default: ['en'],
+    },
+    supportedLngs: ['en', 'fil', 'sbl'],
+    // Treat 'en-US', 'fil-PH', etc. as their base language (avoids 404s).
+    load: 'languageOnly',
+    nonExplicitSupportedLngs: true,
     debug: import.meta.env.DEV,
     defaultNS: 'common',
     ns: ['common'],

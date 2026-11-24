@@ -10,7 +10,8 @@ export type LanguageType =
   | 'pag' // Pangasinan
   | 'mag' // Maguindanao
   | 'tsg' // Tausug
-  | 'mdh'; // Maranao
+  | 'mdh' // Maranao
+  | 'sbl'; // Botolan Sambal (local language of Botolan, Zambales)
 
 export interface NavigationItem {
   label: string;

@@ -1,78 +1,48 @@
-# Enroll Children in LGU Daycare or Preschool Programs — Lapu-Lapu City
+# Enroll Your Child in Daycare or Preschool
 
-The Lapu-Lapu City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
+How to enroll young children in daycare and kindergarten in Botolan.
 
----
-
-## 1) LGU Daycare Programs
-
-**What’s offered**
-
-- Early childhood care and development for children aged **3–4 years old**.
-- Daily activities on socialization, basic learning skills, play-based lessons, and health/nutrition monitoring.
-- Free or minimal-cost supplementary feeding (depending on barangay program).
-
-**Who can join**
-
-- Children aged **3–4 years old** who are residents of the barangay.
-- Priority is often given to **indigent families** or those referred by barangay officials.
-
-**Requirements (typical)**
-
-- Child’s **birth certificate** (PSA copy or local civil registrar copy).
-- **Barangay clearance** or proof of residency.
-- 1×1 ID photo of the child (for records).
-- Filled-out **Daycare Enrollment Form** (available at the center).
-
-**How to enroll**
-
-1. Visit your **Barangay Daycare Center** or **Barangay Hall** to ask for the enrollment schedule.
-2. Submit required documents and fill out the enrollment form.
-3. Attend the orientation session for parents/guardians (usually held before classes start).
-
-**Cost:** Free (LGU-funded), though some barangays may request voluntary contributions for class materials.
+> **Please note:** This guide explains how this service generally works under Philippine law. Details specific to Botolan are marked **To be confirmed** until verified with the Municipal Government. Please call or visit the office before you go.
 
 ---
 
-## 2) Public Preschool (Kindergarten)
+## Who it is for
 
-**What’s offered**
+- Parents/guardians of children aged 3-4 (daycare).
+- Parents of 5-year-olds, who must attend kindergarten.
 
-- Department of Education (DepEd) **Kindergarten Program** for **5-year-old children**, implemented in public elementary schools.
-- Focus on school readiness: literacy, numeracy, and social skills.
+## How it works
 
-**Who can join**
+1. **Ages 3-4:** ask the social welfare office about the **Child Development Center (daycare)** near your barangay.
+2. **Age 5:** enroll at a **DepEd public elementary school** during enrollment.
+3. **Submit documents** and fill out the enrollment form.
+4. **Attend the parents' orientation** if held.
 
-- Children aged **5 years old** by the opening of the school year.
-- Priority for residents within the school’s catchment area.
+## What to bring
 
-**Requirements (typical DepEd)**
+- PSA birth certificate
+- Immunization record
+- ID photos of the child
+- Parent/guardian valid ID
 
-- Child’s **birth certificate** (PSA).
-- Proof of residency (Barangay Certificate).
-- 2×2 ID photo of the child.
-- Accomplished **DepEd Kindergarten Registration Form** (given at school).
+## Where to go in Botolan
 
-**How to enroll**
+| Detail           | Information                                  |
+| ---------------- | -------------------------------------------- |
+| **Office**       | MSWDO (daycare); DepEd school (kindergarten) |
+| **Location**     | {MSWDO_WHERE}                                |
+| **Contact**      | {MSWDO_CONTACT}                              |
+| **Office hours** | {OFFICE_HOURS}                               |
 
-1. Proceed to the **nearest public elementary school** during the announced **DepEd early registration** or regular enrollment period.
-2. Submit required documents to the school registrar.
-3. Attend orientation for parents and guardians.
+## Legal basis
 
-**Cost:** Free (government-funded).
+- **Republic Act No. 10410** (Early Years Act).
+- **Republic Act No. 10157** (Kindergarten Education Act).
 
----
+## Tips
 
-## Contact & Updates
+- Ask the worker how to get a free PSA birth certificate if needed.
 
-- **Barangay Daycare Centers** — Enrollment schedules and requirements are usually announced by barangay officials.
-- **City Social Welfare and Development Office (CSWDO)** — Oversees daycare programs.
-- **DepEd Lapu-Lapu City Division** — Manages public kindergarten enrollment.
+## Useful links
 
----
-
-### Quick Tips
-
-- Enroll early — daycare and preschool slots may be limited per barangay/school.
-- Keep copies of your child’s **birth certificate** and **barangay certificate** ready.
-- Attend parent orientations to understand your role in supporting your child’s early education.
+- [DepEd](https://www.deped.gov.ph)

@@ -1,0 +1,53 @@
+{
+  "site_name": "Better Botolan",
+  "site_description": "Isang pamayanang portal para sa Bayan ng Botolan, Zambales.",
+  "hero": {
+    "title": "Maligayang pagdating sa Better Botolan",
+    "subtitle": "Isang pamayanang portal para sa impormasyon at serbisyo ng Bayan ng Botolan, Zambales.",
+    "nationalId": "Pambansang ID",
+    "birthCertificate": "Sertipiko ng Kapanganakan",
+    "businessRegistration": "Pagpaparehistro ng Negosyo"
+  },
+  "services": {
+    "title": "Mga Serbisyo at Impormasyon",
+    "governmentServices": "Mga Serbisyo ng Pamahalaan",
+    "description": "Maghanap ng impormasyon tungkol sa mga serbisyo ng lokal na pamahalaan sa Botolan — permit sa negosyo, kalusugan, kapakanang panlipunan, agrikultura, at iba pa.",
+    "viewAll": "Tingnan Lahat ng Serbisyo",
+    "viewAllCategory": "Tingnan Lahat"
+  },
+  "governmentActivity": {
+    "title": "Mga Gawain ng Pamahalaan",
+    "description": "Manatiling may kaalaman sa mga pinakabagong gawain at anunsiyo ng pamahalaan."
+  },
+  "weather": {
+    "title": "Mga Update sa Panahon"
+  },
+  "forex": {
+    "title": "Halaga ng Palitan ng Dayuhang Pera"
+  },
+  "news": {
+    "title": "Pinakabagong Balita at Update"
+  },
+  "footer": {
+    "copyright": "© 2026 Better Botolan — isang pamayanang inisyatibo. Hindi ito ang opisyal na website ng Pamahalaang Bayan ng Botolan. Ang lahat ng nilalaman ay pampublikong domain maliban kung iba ang nakasaad."
+  },
+  "navbar": {
+    "government": "Pamahalaan",
+    "services": "Mga Serbisyo",
+    "hotlines": "Mga Hotline",
+    "holidays": "Mga Pista Opisyal"
+  },
+  "joinUs": {
+    "stripTitle": "🚀 Sumali sa #CivicTech Revolution",
+    "stripSubtitle": "Tumulong sa pagbuo ng kinabukasan ng Pilipinas at ng pamamahala sa pamamagitan ng teknolohiya",
+    "joinNow": "Sumali Na",
+    "discord": "Discord",
+    "bannerTitle": "Sumali sa #CivicTech Revolution",
+    "bannerSubtitle": "Tumulong sa pagbuo ng kinabukasan ng Pilipinas at ng pamamahala sa pamamagitan ng teknolohiya.",
+    "bannerHighlight": "Pinamumunuan ng mga boluntaryo. Open source. Pinapatakbo ng komunidad.",
+    "joinMovement": "Sumali sa Aming Kilusan",
+    "or": "o",
+    "joinDiscord": "Sumali sa Discord",
+    "features": "🚀 Imprastraktura • 💡 Mentorship • 🤝 Komunidad • 🏢 Opisina"
+  }
+}
