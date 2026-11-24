@@ -232,11 +232,13 @@ function TourStop({
 export default function Tourism() {
   const [tourOpen, setTourOpen] = useState(false);
   const [tourStart, setTourStart] = useState(0);
+  const [tourIntro, setTourIntro] = useState(true);
   // Bumped on each open so TourMode remounts at the chosen stop.
   const [tourInstance, setTourInstance] = useState(0);
 
-  const openTour = (index: number) => {
+  const openTour = (index: number, intro: boolean) => {
     setTourStart(index);
+    setTourIntro(intro);
     setTourInstance(n => n + 1);
     setTourOpen(true);
   };
@@ -248,6 +250,7 @@ export default function Tourism() {
         open={tourOpen}
         onClose={() => setTourOpen(false)}
         startIndex={tourStart}
+        withIntro={tourIntro}
       />
       <SEO
         title="Tourism & Attractions"
@@ -285,11 +288,11 @@ export default function Tourism() {
           </p>
           <button
             type="button"
-            onClick={() => openTour(0)}
+            onClick={() => openTour(0, true)}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary-800 shadow-sm transition-transform hover:scale-[1.03]"
           >
             <Compass className="h-4 w-4" aria-hidden="true" />
-            Start the immersive tour
+            Start Tour
           </button>
         </div>
       </section>
@@ -361,7 +364,7 @@ export default function Tourism() {
                       number={globalIndex + 1}
                       leg={leg}
                       delay={i * 60}
-                      onOpen={() => openTour(globalIndex)}
+                      onOpen={() => openTour(globalIndex, false)}
                     />
                   );
                 })}
