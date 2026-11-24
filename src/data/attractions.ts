@@ -101,6 +101,7 @@ const IMAGE_FILES: Record<string, string> = {
   'sta-monica-parish': 'stamonica.jpg',
   'poggio-bustone': 'poggio.jpg',
   'dambana-hermitage': 'dambana.jpg',
+  'rizal-bust': 'rizalbust.jpg',
 };
 
 /** Image URL for a spot's photo (filenames are URL-encoded for spaces). */

@@ -9,16 +9,16 @@
   --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-display: 'Fraunces', Georgia, serif;
 
-  --color-primary-50: #fdecef;
-  --color-primary-100: #fad3da;
-  --color-primary-200: #f4a7b4;
-  --color-primary-300: #ec7a8c;
-  --color-primary-400: #e04a64;
-  --color-primary-500: #d42a44;
-  --color-primary-600: #c8102e;
-  --color-primary-700: #a30d25;
-  --color-primary-800: #7a0a1c;
-  --color-primary-900: #4d0611;
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
 
   --color-secondary-50: #fdf6e7;
   --color-secondary-100: #f9e9c2;
@@ -146,7 +146,7 @@
 
 /* ---- Botolan redesign: global polish ---- */
 body {
-  background-color: #faf8f9;
+  background-color: #f8fafc;
   color: #1a1420;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

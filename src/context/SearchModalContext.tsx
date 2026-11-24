@@ -2,6 +2,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
@@ -29,6 +30,18 @@ export function SearchModalProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const closeSearch = useCallback(() => setOpen(false), []);
+
+  // Global ⌘K / Ctrl+K shortcut to open search from anywhere.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [openSearch]);
 
   const value = useMemo(
     () => ({ openSearch, closeSearch }),

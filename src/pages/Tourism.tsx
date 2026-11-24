@@ -265,7 +265,7 @@ export default function Tourism() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'linear-gradient(to bottom, rgba(61,6,16,0.72), rgba(77,10,28,0.55) 45%, rgba(61,6,16,0.85)), url(/images/pinatubo-hero.svg)',
+              'linear-gradient(to bottom, rgba(23,37,84,0.72), rgba(30,58,138,0.55) 45%, rgba(23,37,84,0.85)), url(/images/pinatubo-hero.svg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

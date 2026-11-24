@@ -4,7 +4,12 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import SEO from '../components/SEO';
 import { siteConfig } from '../config/site';
-import { botolanHotlines, telHref } from '../data/hotlines';
+import {
+  CATEGORY_LABELS,
+  CATEGORY_ORDER,
+  officesByCategory,
+  telHref,
+} from '../data/hotlines';
 
 export default function Hotlines() {
   return (
@@ -47,48 +52,62 @@ export default function Hotlines() {
           </span>
         </a>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {botolanHotlines
-            .filter(office => office.label !== 'Unified Emergency')
-            .map(office => {
-              const Icon = office.icon;
-              return (
-                <div
-                  key={office.label}
-                  className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-[var(--bb-shadow-card)]"
-                >
-                  <div className="mb-4 flex items-center gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-700">
-                      <Icon className="h-6 w-6" aria-hidden="true" />
-                    </span>
-                    <h3 className="font-semibold leading-tight text-gray-900">
-                      {office.label}
-                    </h3>
-                  </div>
+        <div className="space-y-10">
+          {CATEGORY_ORDER.map(category => {
+            const offices = officesByCategory(category);
+            if (offices.length === 0) return null;
+            return (
+              <section key={category}>
+                <h2 className="mb-4 flex items-center gap-2 font-display text-xl font-semibold text-gray-900">
+                  <span className="h-5 w-1.5 rounded-full bg-primary-600" />
+                  {CATEGORY_LABELS[category]}
+                </h2>
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {offices.map(office => {
+                    const Icon = office.icon;
+                    return (
+                      <div
+                        key={office.label}
+                        className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-[var(--bb-shadow-card)]"
+                      >
+                        <div className="mb-4 flex items-center gap-3">
+                          <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-700">
+                            <Icon className="h-6 w-6" aria-hidden="true" />
+                          </span>
+                          <h3 className="font-semibold leading-tight text-gray-900">
+                            {office.label}
+                          </h3>
+                        </div>
 
-                  <ul className="space-y-2">
-                    {office.numbers.map(num => (
-                      <li key={num}>
-                        <a
-                          href={telHref(num)}
-                          className="flex items-center gap-2 rounded-lg bg-gray-50 px-3 py-2.5 font-mono text-lg font-semibold text-gray-900 transition hover:bg-primary-50 hover:text-primary-700"
-                        >
-                          <Phone
-                            className="h-4 w-4 text-primary-600"
-                            aria-hidden="true"
-                          />
-                          {num}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                        <ul className="space-y-2">
+                          {office.numbers.map(num => (
+                            <li key={num}>
+                              <a
+                                href={telHref(num)}
+                                className="flex items-center gap-2 rounded-lg bg-gray-50 px-3 py-2.5 font-mono text-lg font-semibold text-gray-900 transition hover:bg-primary-50 hover:text-primary-700"
+                              >
+                                <Phone
+                                  className="h-4 w-4 text-primary-600"
+                                  aria-hidden="true"
+                                />
+                                {num}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
 
-                  {office.note && (
-                    <p className="mt-3 text-sm text-gray-500">{office.note}</p>
-                  )}
+                        {office.note && (
+                          <p className="mt-3 text-sm text-gray-500">
+                            {office.note}
+                          </p>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
+              </section>
+            );
+          })}
         </div>
 
         <p className="mt-8 text-xs text-gray-500">

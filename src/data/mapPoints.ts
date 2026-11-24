@@ -24,7 +24,7 @@ export const categoryMeta: Record<
   PointCategory,
   { label: string; color: string }
 > = {
-  government: { label: 'Government', color: '#c8102e' },
+  government: { label: 'Government', color: '#2563eb' },
   landmark: { label: 'Landmark', color: '#7d5900' },
   health: { label: 'Health', color: '#007a3d' },
   school: { label: 'School', color: '#1d4ed8' },

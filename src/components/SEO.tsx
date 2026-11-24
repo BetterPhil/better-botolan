@@ -68,7 +68,7 @@ export default function SEO({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#C8102E" />
+      <meta name="theme-color" content="#2563eb" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
