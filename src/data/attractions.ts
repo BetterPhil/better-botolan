@@ -81,9 +81,32 @@ export const CATEGORY_META: Record<
   },
 };
 
-/** Image path for a spot's photo (drop a JPG here to light it up). */
+/**
+ * Actual photo filenames placed in public/images/tourism/.
+ * Map a spot's slug to the exact file name on disk (spaces and case included).
+ * Any slug not listed here falls back to "<slug>.jpg"; if that file is missing,
+ * the tour shows the themed gradient panel instead.
+ */
+const IMAGE_FILES: Record<string, string> = {
+  'balin-pamana': 'balin.jpg',
+  'coast-of-botolan': 'coastal.jpg',
+  'bancal-river-cruise': 'bancal.jpg',
+  'pawikan-release': 'pawikan.jpg',
+  'mt-pinatubo': 'pinatubo trail.jpg',
+  'tukal-tukal-falls': 'tukaltukal.jpg',
+  'camp-kainomayan': 'kainomayan.jpg',
+  'glamping-batis': 'glamping.jpg',
+  'ina-poon-bato': 'poonbato church.JPG',
+  'ifi-ina-poonbato': 'ifi poonbato.jpg',
+  'sta-monica-parish': 'stamonica.jpg',
+  'poggio-bustone': 'poggio.jpg',
+  'dambana-hermitage': 'dambana.jpg',
+};
+
+/** Image URL for a spot's photo (filenames are URL-encoded for spaces). */
 export function attractionImage(a: Attraction): string {
-  return `/images/tourism/${a.slug}.jpg`;
+  const file = IMAGE_FILES[a.slug] ?? `${a.slug}.jpg`;
+  return `/images/tourism/${encodeURIComponent(file)}`;
 }
 
 const TOURISM_OFFICE = {
