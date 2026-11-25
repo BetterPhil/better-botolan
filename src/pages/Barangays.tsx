@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router';
-import { Search, Users, ArrowRight } from 'lucide-react';
+import { Search, Users, ArrowRight, UserRound } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import BarangayLogo from '../components/barangays/BarangayLogo';
+import BarangayModal from '../components/barangays/BarangayModal';
 import SEO from '../components/SEO';
 import { siteConfig } from '../config/site';
 import {
@@ -12,6 +12,7 @@ import {
   BARANGAY_SOURCE,
   POPULATION_TOTAL_2020,
   barangays,
+  getCaptain,
   type Barangay,
 } from '../data/barangays';
 
@@ -27,6 +28,7 @@ function growth(b: Barangay): number | null {
 export default function Barangays() {
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<SortKey>('name');
+  const [selected, setSelected] = useState<Barangay | null>(null);
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -132,11 +134,13 @@ export default function Barangays() {
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {rows.map(b => {
               const g = growth(b);
+              const captain = getCaptain(b.slug);
               return (
                 <li key={b.slug}>
-                  <Link
-                    to={`/barangays/${b.slug}`}
-                    className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-[var(--bb-shadow-card)] transition hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-[var(--bb-shadow-lift)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                  <button
+                    type="button"
+                    onClick={() => setSelected(b)}
+                    className="group flex h-full w-full flex-col rounded-2xl border border-gray-200 bg-white p-5 text-left shadow-[var(--bb-shadow-card)] transition hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-[var(--bb-shadow-lift)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                   >
                     <div className="flex items-center gap-3">
                       <BarangayLogo slug={b.slug} name={b.name} size={48} />
@@ -158,6 +162,19 @@ export default function Barangays() {
                         </div>
                       </div>
                     </div>
+
+                    {captain && (
+                      <div className="mt-3 flex items-center gap-1.5 text-xs text-gray-600">
+                        <UserRound
+                          className="h-3.5 w-3.5 text-primary-600"
+                          aria-hidden="true"
+                        />
+                        <span className="truncate">
+                          <span className="text-gray-400">Captain: </span>
+                          {captain}
+                        </span>
+                      </div>
+                    )}
 
                     <div className="mt-4 flex items-end justify-between">
                       <div>
@@ -186,16 +203,14 @@ export default function Barangays() {
 
                     <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3">
                       <span className="text-xs font-medium text-gray-400">
-                        {b.history && b.history.length > 0
-                          ? 'History available'
-                          : 'View details'}
+                        View details
                       </span>
                       <ArrowRight
                         className="h-4 w-4 text-primary-600 transition-transform group-hover:translate-x-1"
                         aria-hidden="true"
                       />
                     </div>
-                  </Link>
+                  </button>
                 </li>
               );
             })}
@@ -217,6 +232,8 @@ export default function Barangays() {
           not all published yet.
         </p>
       </Section>
+
+      <BarangayModal barangay={selected} onClose={() => setSelected(null)} />
     </>
   );
 }

@@ -117,7 +117,7 @@ export const barangays: Barangay[] = [
   },
   {
     name: 'Capayawan',
-    slug: 'capayawan.jpg',
+    slug: 'capayawan',
     population2020: 1187,
     population2015: 1010,
   },
@@ -367,4 +367,58 @@ export const POPULATION_TOTAL_2020 = 66739;
 
 export function getBarangay(slug: string): Barangay | undefined {
   return barangays.find(b => b.slug === slug);
+}
+
+/**
+ * Punong Barangay (barangay captain) by slug.
+ * Source: Municipal Government of Botolan — "List of Punong Barangays as of
+ * November 2026." Update here when officials change.
+ */
+export const PUNONG_BARANGAYS: Record<string, string> = {
+  bancal: 'Emily D. Diñoso',
+  bangan: 'Roel P. Deliguin',
+  batonlapoc: 'Henry D. Balangon',
+  belbel: 'George C. Dumlao',
+  beneg: 'Stella Marie D. Mahinay',
+  binuclutan: 'Fernando D. Oñate, Jr.',
+  burgos: 'Jessica L. Domulot',
+  cabatuan: 'Edilberto L. Fronda',
+  capayawan: 'Joseph S. Dial',
+  carael: 'Allan D. Domacena',
+  danacbunga: 'Angel G. Devera, Jr.',
+  maguisguis: 'Roseller Tabunday',
+  malomboy: 'Erwin D. Dolojan',
+  mambog: 'Aris George D. Lingat, Sr.',
+  moraza: 'Yangilena P. Daria',
+  nacolcol: 'Arman L. Cruzado',
+  'owaog-nibloc': 'Gelyn C. Romero',
+  paco: 'Marlene D. Dilag',
+  palis: 'Manuel F. Dela Cruz',
+  panan: 'Alberto D. Viloria',
+  parel: 'Isagani Aguilar',
+  paudpod: 'Joselito H. Cabalic',
+  poonbato: 'Garry R. Guevarra',
+  porac: 'Lolita E. Angeles',
+  'san-isidro': 'Doroteo R. Dilag',
+  'san-juan': 'Marycel M. Villanueva',
+  'san-miguel': 'Alvin D. Dullas',
+  santiago: 'Alberto R. Villanueva',
+  tampo: 'Roberto Y. Divino, Jr.',
+  taugtog: 'Mercidita B. Panes',
+  villar: 'Ernie B. Juliano',
+};
+
+/** Date the Punong Barangay list was issued. */
+export const PUNONG_BARANGAYS_ASOF = 'November 2026';
+
+export function getCaptain(slug: string): string | undefined {
+  return PUNONG_BARANGAYS[slug];
+}
+
+/** Two-letter initials from a person's name (for avatars). */
+export function personInitials(name: string): string {
+  const parts = name.replace(/,.*$/, '').trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return '?';
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 }

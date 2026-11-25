@@ -7,6 +7,7 @@ import {
   ScrollText,
   TrendingDown,
   TrendingUp,
+  UserRound,
   Users,
 } from 'lucide-react';
 import Section from '../components/ui/Section';
@@ -14,7 +15,13 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Heading } from '../components/ui/Heading';
 import SEO from '../components/SEO';
 import { Banner } from '@bettergov/kapwa/banner';
-import { getBarangay, BARANGAY_SOURCE } from '../data/barangays';
+import {
+  getBarangay,
+  getCaptain,
+  personInitials,
+  PUNONG_BARANGAYS_ASOF,
+  BARANGAY_SOURCE,
+} from '../data/barangays';
 import BarangayLogo from '../components/barangays/BarangayLogo';
 import { siteConfig } from '../config/site';
 
@@ -53,6 +60,7 @@ export default function BarangayDetail() {
       : null;
   const grew = (growth ?? 0) >= 0;
   const hasHistory = (barangay.history?.length ?? 0) > 0;
+  const captain = getCaptain(barangay.slug);
 
   return (
     <>
@@ -94,6 +102,26 @@ export default function BarangayDetail() {
               )}
             </div>
           </div>
+
+          {captain && (
+            <div className="mt-6 flex items-center gap-4 rounded-xl border border-primary-100 bg-white/70 p-4">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-600 to-primary-800 font-display text-lg font-bold text-white shadow-sm">
+                {personInitials(captain)}
+              </span>
+              <div className="min-w-0">
+                <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary-600">
+                  <UserRound className="h-3.5 w-3.5" aria-hidden="true" />
+                  Punong Barangay
+                </p>
+                <p className="font-display text-lg font-semibold text-gray-900">
+                  {captain}
+                </p>
+                <p className="text-xs text-gray-400">
+                  As of {PUNONG_BARANGAYS_ASOF}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Stats */}
