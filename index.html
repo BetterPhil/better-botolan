@@ -12,6 +12,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Better Botolan" />
+    <!-- Capture the install prompt early, before React mounts, so it is never missed. -->
+    <script>
+      window.__bbDeferredPrompt = null;
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        window.__bbDeferredPrompt = e;
+        window.dispatchEvent(new CustomEvent('bb:installchange'));
+      });
+      window.addEventListener('appinstalled', function () {
+        window.__bbDeferredPrompt = null;
+        window.dispatchEvent(new CustomEvent('bb:installchange'));
+      });
+    </script>
     <title>
         Better Botolan | Republic of the Philippines | Community Powered Government
         Portal

@@ -3,6 +3,7 @@ import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import SEO from '../components/SEO';
+import OfflineReadyBadge from '../components/pwa/OfflineReadyBadge';
 import { siteConfig } from '../config/site';
 import {
   CATEGORY_LABELS,
@@ -30,6 +31,10 @@ export default function Hotlines() {
           title={`${siteConfig.shortName} Emergency Hotlines`}
           description="Save these numbers now. In a life-threatening emergency, call 911 — one number for police, fire and medical response."
         />
+
+        <div className="mb-8">
+          <OfflineReadyBadge />
+        </div>
 
         <a
           href={telHref('911')}

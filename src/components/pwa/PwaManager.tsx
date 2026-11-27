@@ -1,35 +1,33 @@
 import { useEffect, useState } from 'react';
 import { Download, RefreshCw, Share, WifiOff, X } from 'lucide-react';
 import { SW_UPDATE_EVENT, applyUpdate } from '../../pwa/registerSW';
+import {
+  INSTALL_CHANGE_EVENT,
+  IOS_HINT_EVENT,
+  canInstall,
+  isIos,
+  isStandalone,
+  promptInstall,
+} from '../../pwa/install';
 
-/** Non-standard event fired by Chromium browsers before the install banner. */
-interface BeforeInstallPromptEvent extends Event {
-  prompt: () => Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
-
-const DISMISS_KEY = 'bb-install-dismissed';
-
-function isStandalone() {
-  if (typeof window === 'undefined') return false;
-  return (
-    window.matchMedia?.('(display-mode: standalone)').matches ||
-    // iOS Safari
-    (window.navigator as unknown as { standalone?: boolean }).standalone ===
-      true
-  );
-}
-
-function isIos() {
-  if (typeof navigator === 'undefined') return false;
-  return /iphone|ipad|ipod/i.test(navigator.userAgent);
-}
+const DISMISS_KEY = 'bb-install-dismissed-at';
+const DISMISS_DAYS = 14;
 
 function dismissed() {
   try {
-    return localStorage.getItem(DISMISS_KEY) === '1';
+    const at = Number(localStorage.getItem(DISMISS_KEY) || 0);
+    if (!at) return false;
+    return Date.now() - at < DISMISS_DAYS * 24 * 60 * 60 * 1000;
   } catch {
     return false;
+  }
+}
+
+function rememberDismiss() {
+  try {
+    localStorage.setItem(DISMISS_KEY, String(Date.now()));
+  } catch {
+    // a remembered dismissal is a nicety, not required
   }
 }
 
@@ -58,7 +56,7 @@ function OfflineBanner() {
       role="status"
       className="fixed inset-x-0 top-0 z-[60] flex items-center justify-center gap-2 bg-amber-500 px-4 py-2 text-sm font-medium text-white shadow-md"
     >
-      <WifiOff className="h-4 w-4" aria-hidden="true" />
+      <WifiOff className="h-4 w-4 shrink-0" aria-hidden="true" />
       You&rsquo;re offline — showing saved pages. Hotlines still work.
     </div>
   );
@@ -107,51 +105,44 @@ function UpdatePrompt() {
 /* ------------------------------- Install ------------------------------- */
 
 function InstallPrompt() {
-  const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(
-    null
-  );
-  const [showIosHint, setShowIosHint] = useState(false);
+  const [installable, setInstallable] = useState(() => canInstall());
+  const [iosHint, setIosHint] = useState(false);
   const [hidden, setHidden] = useState(() => dismissed() || isStandalone());
 
   useEffect(() => {
-    if (hidden) return;
-    const onPrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferred(e as BeforeInstallPromptEvent);
-    };
-    window.addEventListener('beforeinstallprompt', onPrompt);
+    const onChange = () => setInstallable(canInstall());
+    window.addEventListener(INSTALL_CHANGE_EVENT, onChange);
 
-    // iOS gives no event — offer manual instructions instead.
+    // Let the footer button ask for the iOS instructions explicitly.
+    const onIosHint = () => setIosHint(true);
+    window.addEventListener(IOS_HINT_EVENT, onIosHint);
+
+    // Auto-offer the iOS hint (iOS never fires beforeinstallprompt).
     let t: number | undefined;
-    if (isIos() && !isStandalone()) {
-      t = window.setTimeout(() => setShowIosHint(true), 2500);
+    if (!hidden && isIos() && !isStandalone()) {
+      t = window.setTimeout(() => setIosHint(true), 2500);
     }
     return () => {
-      window.removeEventListener('beforeinstallprompt', onPrompt);
+      window.removeEventListener(INSTALL_CHANGE_EVENT, onChange);
+      window.removeEventListener(IOS_HINT_EVENT, onIosHint);
       if (t) window.clearTimeout(t);
     };
   }, [hidden]);
 
   const close = () => {
     setHidden(true);
-    setDeferred(null);
-    setShowIosHint(false);
-    try {
-      localStorage.setItem(DISMISS_KEY, '1');
-    } catch {
-      // ignore — a remembered dismissal is a nicety, not required
-    }
+    setIosHint(false);
+    rememberDismiss();
   };
 
   const install = async () => {
-    if (!deferred) return;
-    await deferred.prompt();
-    await deferred.userChoice.catch(() => undefined);
-    close();
+    const outcome = await promptInstall();
+    if (outcome !== 'unavailable') close();
   };
 
-  if (hidden) return null;
-  if (!deferred && !showIosHint) return null;
+  // The iOS hint can be requested from the footer even after a dismissal.
+  if (hidden && !iosHint) return null;
+  if (!installable && !iosHint) return null;
 
   return (
     <div className="fixed inset-x-4 bottom-4 z-[55] mx-auto max-w-sm rounded-2xl border border-gray-200 bg-white p-4 shadow-xl sm:right-4 sm:left-auto">
@@ -173,7 +164,7 @@ function InstallPrompt() {
           <p className="text-sm font-semibold text-gray-900">
             Install Better Botolan
           </p>
-          {showIosHint ? (
+          {iosHint && !installable ? (
             <p className="mt-0.5 flex flex-wrap items-center gap-1 text-sm text-gray-600">
               Tap <Share className="inline h-4 w-4" aria-hidden="true" /> then
               &ldquo;Add to Home Screen&rdquo; to use it offline.

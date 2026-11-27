@@ -3,6 +3,7 @@ import { ExternalLink, Mail, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { siteConfig } from '../../config/site';
 import { serviceCategories } from '../../data/yamlLoader';
+import InstallButton from '../pwa/InstallButton';
 
 const linkClass = 'text-sm text-gray-300 hover:text-white transition-colors';
 
@@ -107,6 +108,11 @@ export default function Footer() {
                   Contribute on GitHub
                   <ExternalLink className="h-3 w-3" aria-hidden="true" />
                 </a>
+              </li>
+              <li>
+                <InstallButton
+                  className={`${linkClass} inline-flex items-center gap-1`}
+                />
               </li>
             </ul>
           </div>

@@ -23,6 +23,7 @@ import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import SEO from '../components/SEO';
+import OfflineReadyBadge from '../components/pwa/OfflineReadyBadge';
 import BotolanMap from '../components/map/BotolanMap';
 import { useWeather, weatherLabel } from '../hooks/useWeather';
 import {
@@ -90,6 +91,10 @@ export default function Preparedness() {
           title="Disaster Preparedness & Safety"
           description="Live weather, hazard information, evacuation guidance, and what to do before, during, and after a disaster in Botolan."
         />
+
+        <div className="mt-4">
+          <OfflineReadyBadge label="Key info available offline" />
+        </div>
 
         {/* Emergency banner */}
         <div className="mt-6 flex flex-col gap-3 rounded-2xl bg-gradient-to-r from-primary-700 to-blue-800 p-5 text-white sm:flex-row sm:items-center sm:justify-between">
