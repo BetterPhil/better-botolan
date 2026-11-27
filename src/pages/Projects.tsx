@@ -6,6 +6,7 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
 import SEO from '../components/SEO';
+import LocalProjectsTracker from '../components/projects/LocalProjectsTracker';
 import BudgetDisclaimers from '../components/sections/BudgetDisclaimers';
 import { useBotolanBudget } from '../hooks/useBotolanBudget';
 import { siteConfig } from '../config/site';
@@ -66,7 +67,22 @@ export default function Projects() {
           items={[{ label: 'Home', href: '/' }, { label: 'Projects' }]}
         />
 
-        <Heading level={1}>FY2027 Budget Projects</Heading>
+        <Heading level={1}>Projects</Heading>
+        <Text className="mt-2 max-w-3xl text-gray-600">
+          Two views of public projects in {siteConfig.shortName}: the
+          municipality&apos;s own capital projects, and the national-government
+          budget lines that name the town.
+        </Text>
+
+        {/* Botolan's own 2025 capital projects */}
+        <div className="mt-8">
+          <LocalProjectsTracker />
+        </div>
+
+        {/* National-government budget lines (FY2027, live API) */}
+        <hr className="my-12 border-gray-200" />
+
+        <Heading level={2}>National-government budget lines (FY2027)</Heading>
         <Text className="mt-2 max-w-3xl text-gray-600">
           National-government projects whose title names {siteConfig.shortName},
           in the FY2027 budget. Figures come live from the{' '}

@@ -10,12 +10,17 @@ import StaticPage from './pages/StaticPage';
 import Tourism from './pages/Tourism';
 import Statistics from './pages/Statistics';
 import Events from './pages/Events';
+import News from './pages/News';
+import Preparedness from './pages/Preparedness';
+import Feedback from './pages/Feedback';
+import Budget from './pages/Budget';
 import About from './pages/About';
 import Schools from './pages/Schools';
 import Barangays from './pages/Barangays';
 import BarangayDetail from './pages/BarangayDetail';
 import Hotlines from './pages/Hotlines';
 import DisclaimerModal from './components/ui/DisclaimerModal';
+import PwaManager from './components/pwa/PwaManager';
 import Government from './pages/Government';
 import Search from './pages/Search';
 import Projects from './pages/Projects';
@@ -34,6 +39,7 @@ function App() {
         <NuqsAdapter>
           <SearchModalProvider>
             <div className="min-h-screen flex flex-col">
+              <PwaManager />
               <DisclaimerModal />
               <Navbar />
               <ScrollToTop />
@@ -62,6 +68,10 @@ function App() {
                 <Route path="/tourism" element={<Tourism />} />
                 <Route path="/statistics" element={<Statistics />} />
                 <Route path="/events" element={<Events />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/preparedness" element={<Preparedness />} />
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="/budget" element={<Budget />} />
                 <Route path="/barangays" element={<Barangays />} />
                 <Route path="/barangays/:slug" element={<BarangayDetail />} />
                 <Route path="/hotlines" element={<Hotlines />} />

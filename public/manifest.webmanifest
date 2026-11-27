@@ -1,0 +1,50 @@
+{
+  "name": "Better Botolan — Community Government Portal",
+  "short_name": "Better Botolan",
+  "description": "Services, news, tourism, and disaster-preparedness information for the Municipality of Botolan, Zambales. Key pages work offline.",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "lang": "en",
+  "categories": ["government", "news", "travel", "education"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Emergency Hotlines",
+      "short_name": "Hotlines",
+      "description": "Emergency, security, health and utility numbers",
+      "url": "/hotlines?source=pwa-shortcut",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Disaster Preparedness",
+      "short_name": "Preparedness",
+      "description": "What to do before, during and after a disaster",
+      "url": "/preparedness?source=pwa-shortcut",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

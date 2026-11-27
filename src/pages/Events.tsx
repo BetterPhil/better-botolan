@@ -474,14 +474,14 @@ export default function Events() {
         )}
 
         {/* Contribute note */}
-        <p className="mt-6 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-500">
+        {/*<p className="mt-6 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-500">
           Showing national holidays. Botolan town fiestas, barangay fiestas, and
           LGU activities can be added in{' '}
           <code className="rounded bg-gray-200 px-1.5 py-0.5 text-xs text-gray-700">
             src/data/events.ts
           </code>
           .
-        </p>
+        </p>*/}
       </Section>
 
       <EventModal entry={modal} onClose={() => setModal(null)} />

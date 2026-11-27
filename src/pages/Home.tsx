@@ -2,6 +2,7 @@ import Hero from '../components/sections/Hero';
 import BotolanAtAGlance from '../components/home/BotolanAtAGlance';
 import ServicesSection from '../components/home/ServicesSection';
 import DiscoverBotolan from '../components/home/DiscoverBotolan';
+import ExchangeRates from '../components/home/ExchangeRates';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
 import HelpCta from '../components/home/HelpCta';
 import SEO from '../components/SEO';
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
         <BotolanAtAGlance />
         <ServicesSection />
         <DiscoverBotolan />
+        <ExchangeRates />
         <GovernmentActivitySection title="Government" />
         <HelpCta />
       </main>
