@@ -76,7 +76,10 @@ function Donut({ items }: { items: SpendItem[] }) {
   const startAmount = (idx: number) =>
     items.slice(0, idx).reduce((s, it) => s + it.amount, 0);
   return (
-    <svg viewBox="0 0 120 120" className="h-56 w-56 -rotate-90">
+    <svg
+      viewBox="0 0 120 120"
+      className="h-auto w-44 max-w-full -rotate-90 sm:w-56"
+    >
       <circle
         cx="60"
         cy="60"
@@ -150,7 +153,7 @@ function DonutPanel({
 }) {
   const total = items.reduce((s, i) => s + i.amount, 0);
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
       <p className="mb-4 flex items-center gap-2 font-display text-lg font-bold text-gray-900">
         {icon}
         {title}
@@ -357,7 +360,7 @@ export default function Budget() {
             {/* SOCIAL */}
             <section id="social" className="scroll-mt-24">
               <SectionTitle>Social services up close</SectionTitle>
-              <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm">
                 <p className="mb-4 flex items-center gap-2 font-display text-lg font-bold text-gray-900">
                   <TrendingUp
                     className="h-5 w-5 text-primary-600"
@@ -381,7 +384,7 @@ export default function Budget() {
             {/* COMPARE */}
             <section id="compare" className="scroll-mt-24">
               <SectionTitle>Compared with last year</SectionTitle>
-              <div className="mt-4 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+              <div className="mt-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 sm:p-6">
                 <p className="font-display text-lg font-bold text-gray-900">
                   {priorYearSummary.label}
                 </p>
@@ -419,7 +422,7 @@ export default function Budget() {
               <SectionTitle>About the data</SectionTitle>
 
               {/* Glossary */}
-              <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm">
                 <p className="mb-4 flex items-center gap-2 font-display text-lg font-bold text-gray-900">
                   <BookOpen
                     className="h-5 w-5 text-primary-600"
@@ -442,7 +445,7 @@ export default function Budget() {
               </div>
 
               {/* Sources */}
-              <div className="mt-6 rounded-2xl border border-blue-200 bg-blue-50 p-6">
+              <div className="mt-6 rounded-2xl border border-blue-200 bg-blue-50 p-5 sm:p-6">
                 <p className="flex items-center gap-2 font-display text-lg font-bold text-gray-900">
                   <Wallet
                     className="h-5 w-5 text-blue-600"

@@ -53,7 +53,10 @@ export default function NtaGauge({
       <div className="flex flex-col items-center gap-8 sm:flex-row sm:gap-10">
         {/* Radial gauge */}
         <div className="relative shrink-0">
-          <svg viewBox="0 0 120 120" className="h-40 w-40 -rotate-90">
+          <svg
+            viewBox="0 0 120 120"
+            className="h-auto w-36 max-w-full -rotate-90 sm:w-40"
+          >
             <circle
               cx="60"
               cy="60"
