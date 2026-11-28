@@ -1,0 +1,38 @@
+# Real Property & Tax Declarations — Municipal Assessor's Office
+# Services transcribed from the office's official Citizen's Charter.
+
+title: "Municipal Assessor's Office services"
+description: "Official services for real property owners — from the Municipal Assessor's Office Citizen's Charter. Each guide shows the exact requirements, fees, and processing times."
+
+pages:
+  - name: 'Get a tax declaration for a new building or machinery'
+    slug: 'get-tax-declaration-new-building-or-machinery'
+    description: 'Have a newly built structure or installed machinery assessed and issued its own tax declaration.'
+
+  - name: "Transfer a tax declaration to a new owner"
+    slug: 'transfer-tax-declaration-to-new-owner'
+    description: 'Update the tax declaration after buying, inheriting, or receiving property so it reflects the new owner.'
+
+  - name: 'Get a real property tax clearance'
+    slug: 'get-real-property-tax-clearance'
+    description: 'Secure a Real Property Tax Clearance Certificate, often required for a business permit.'
+
+  - name: 'Request certified copies or certifications'
+    slug: 'request-certified-copies-or-certifications'
+    description: 'Get a certified photocopy, machine copy, or a certification of no/with improvement or no property.'
+
+  - name: 'Cancel, revise, or correct a property assessment'
+    slug: 'cancel-revise-or-correct-an-assessment'
+    description: 'Fix or cancel an assessment when a property no longer exists or its details are wrong.'
+
+  - name: 'Declare a newly titled or accreted property'
+    slug: 'declare-newly-titled-or-accreted-property'
+    description: 'Get the first tax declaration for a newly titled lot or land gained through accretion.'
+
+  - name: "Verify a property's assessment history"
+    slug: 'verify-property-assessment-history'
+    description: 'Research the history of real property tax assessments or a tax declaration.'
+
+  - name: "Verify a property's location and vicinity"
+    slug: 'verify-property-location-and-vicinity'
+    description: 'Confirm where a property sits on the tax map and get a copy of its location.'

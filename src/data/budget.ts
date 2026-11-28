@@ -1,16 +1,42 @@
 /**
  * Budget & spending data for the "Where the money goes" dashboard.
  *
- * VERIFIED figures are from public reporting of Mayor Jun Omar Ebdane's 2025
- * State of the Municipal Address (SOMA) and the 2023 Cities & Municipalities
- * Competitive Index (CMCI). Full official income / National Tax Allotment /
- * expenditure statements come from BLGF and DBM — linked below and left for the
- * LGU to fill with exact figures (marked confirmed: false).
+ * Income and expenditure figures are OFFICIAL, from the Bureau of Local
+ * Government Finance (BLGF) Statement of Receipts & Expenditures (SRE).
+ * The HEADLINE figures are the latest available period, FY2026 as of Q3
+ * (year-to-date, January–September 2026), extracted 21 October 2026. FY2025
+ * (full year) is kept for context. Every rollup in both periods cross-foots
+ * exactly (local = tax + non-tax; income = local + external; expenditures =
+ * the four sectors). Values are nominal pesos.
+ *
+ * IMPORTANT: FY2026 figures cover only 9 months, so they are NOT directly
+ * comparable to the full FY2025 year — always shown with a "year-to-date" label.
+ *
+ * The capital-projects list further below (localProjects) is the 2025
+ * development PROGRAM — a plan, from news reporting — kept distinct from these
+ * SRE actuals.
  *
  * Sources:
- *  - Punto! Central Luzon / Business Mirror / Manila Times (Botolan 2025 program)
- *  - DILG Full Disclosure Policy Portal, BLGF SRE, DBM NTA
+ *  - BLGF SRE by LGU, FY2026-Q3 (Preliminary) — primary/current
+ *  - BLGF SRE by LGU, FY2025 (Preliminary) — prior full year
+ *  - BetterGov.ph Open Data (SRE mirror); DILG FDP; DBM (NTA)
  */
+
+/** The latest reporting period shown as the dashboard headline. */
+export const SRE_CURRENT = {
+  fy: 2026,
+  periodLabel: 'FY2026 · as of Q3',
+  coverage: 'Year-to-date (January–September 2026)',
+  status: 'Preliminary',
+  extracted: '21 October 2026',
+};
+
+/** The last complete year, kept for context/comparison. */
+export const SRE_PRIOR = {
+  fy: 2025,
+  periodLabel: 'FY2025 (full year)',
+  status: 'Preliminary',
+};
 
 export interface BudgetSource {
   label: string;
@@ -19,12 +45,16 @@ export interface BudgetSource {
 
 export const budgetSources: BudgetSource[] = [
   {
-    label: 'DILG Full Disclosure Policy Portal',
-    url: 'https://fdpp.dilg.gov.ph/',
+    label: 'BLGF — Statement of Receipts & Expenditures (SRE)',
+    url: 'https://blgf.gov.ph/lgu-fiscal-data/',
   },
   {
-    label: 'Bureau of Local Government Finance (BLGF)',
-    url: 'https://blgf.gov.ph/',
+    label: 'BetterGov.ph — Open Data (SRE dataset)',
+    url: 'https://data.bettergov.ph/datasets/9',
+  },
+  {
+    label: 'DILG Full Disclosure Policy Portal',
+    url: 'https://fdpp.dilg.gov.ph/',
   },
   {
     label: 'Department of Budget and Management (DBM)',
@@ -45,21 +75,27 @@ export interface KeyFigure {
 
 export const keyFigures: KeyFigure[] = [
   {
-    id: 'local-revenue',
-    label: 'Local revenue',
-    value: 494_200_000,
+    id: 'total-income',
+    label: 'Total income (YTD Q3)',
+    value: 480_463_638,
     prefix: '₱',
-    detail:
-      'Third-largest local revenue in Zambales (2023 Cities & Municipalities Competitive Index).',
+    detail: 'Current operating income, Jan–Sep 2026 (BLGF SRE, FY2026 Q3).',
     confirmed: true,
   },
   {
-    id: 'dev-program-2025',
-    label: '2025 development program',
-    value: 199_900_000,
+    id: 'nta',
+    label: 'National Tax Allotment',
+    value: 399_038_038,
     prefix: '₱',
-    detail:
-      'Big-ticket projects announced for 2025 (Land Bank funding facility).',
+    detail: "Botolan's NTA so far in 2026 — 83.1% of the town's income.",
+    confirmed: true,
+  },
+  {
+    id: 'total-expenditure',
+    label: 'Total expenditures (YTD Q3)',
+    value: 318_598_042,
+    prefix: '₱',
+    detail: 'Current operating expenditures, Jan–Sep 2026 (BLGF SRE).',
     confirmed: true,
   },
   {
@@ -70,15 +106,6 @@ export const keyFigures: KeyFigure[] = [
     detail: 'Municipal income classification (PSA / PSGC).',
     confirmed: true,
   },
-  {
-    id: 'nta',
-    label: 'National Tax Allotment',
-    value: null,
-    display: 'To confirm',
-    detail:
-      "Botolan's annual NTA share from the national government — add the DBM figure here.",
-    confirmed: false,
-  },
 ];
 
 export interface SpendItem {
@@ -88,26 +115,122 @@ export interface SpendItem {
   note?: string;
 }
 
-/** Reported 2024 program spending (SOMA accomplishments). */
-export const spending2024: SpendItem[] = [
+/* ============================ HEADLINE ============================ *
+ * Latest period: FY2026 as of Q3 (year-to-date, Jan–Sep 2026).
+ * These feed the dashboard's main charts.
+ * ================================================================= */
+
+/** Where the money GOES — FY2026 YTD-Q3 expenditures by sector. Total ₱318.60M. */
+export const expendituresCurrent: SpendItem[] = [
+  { label: 'General Public Services', amount: 143_497_664, color: '#2563eb' },
+  { label: 'Social Services', amount: 134_588_765, color: '#0ea5e9' },
+  { label: 'Economic Services', amount: 27_462_028, color: '#059669' },
+  { label: 'Debt Service (interest)', amount: 13_049_585, color: '#f59e0b' },
+];
+
+/** Where the money COMES FROM — FY2026 YTD-Q3 income. Total ₱480.46M; NTA 83.1%. */
+export const incomeCurrent: SpendItem[] = [
+  { label: 'National Tax Allotment', amount: 399_038_038, color: '#2563eb' },
+  { label: 'Local tax revenue', amount: 49_892_136, color: '#059669' },
+  { label: 'Non-tax revenue', amount: 31_533_464, color: '#f59e0b' },
+];
+
+/** Social Services broken down — FY2026 YTD-Q3. */
+export const socialServicesCurrent: SpendItem[] = [
   {
-    label: 'Infrastructure (20% Dev. Fund)',
-    amount: 41_800_000,
-    color: '#2563eb',
-  },
-  {
-    label: 'Disaster Preparedness & Mitigation',
-    amount: 12_000_000,
+    label: 'Health, Nutrition & Population',
+    amount: 57_001_430,
     color: '#0ea5e9',
   },
-  { label: 'College Scholarships', amount: 8_500_000, color: '#059669' },
-  { label: 'High School Scholarships', amount: 4_120_000, color: '#f59e0b' },
+  { label: 'Social Services & Welfare', amount: 47_298_191, color: '#2563eb' },
   {
-    label: 'Seal of Good Local Governance',
-    amount: 1_300_000,
-    color: '#8b5cf6',
+    label: 'Education, Culture & Sports',
+    amount: 20_413_916,
+    color: '#059669',
   },
-  { label: 'Anti-Drug Abuse Council', amount: 150_000, color: '#ef4444' },
+  { label: 'Housing & Community', amount: 9_505_851, color: '#f59e0b' },
+  { label: 'Labor & Employment', amount: 369_377, color: '#8b5cf6' },
+];
+
+/** Share of income that comes from the national NTA (0–1), current period. */
+export const ntaShare =
+  399_038_038 / incomeCurrent.reduce((s, i) => s + i.amount, 0);
+
+/* ===================== PRIOR FULL YEAR (context) ================= *
+ * FY2025 full-year totals, shown for comparison. NOT directly
+ * comparable to the 9-month FY2026 figures above.
+ * ================================================================= */
+export interface YearSummary {
+  label: string;
+  income: number;
+  expenditures: number;
+  nta: number;
+  ntaShare: number;
+}
+
+export const priorYearSummary: YearSummary = {
+  label: SRE_PRIOR.periodLabel,
+  income: 567_250_944,
+  expenditures: 429_021_430,
+  nta: 457_211_929,
+  ntaShare: 457_211_929 / 567_250_944,
+};
+
+/* --------- Dashboard navigation + plain-language helpers ---------- */
+
+export interface BudgetSection {
+  id: string;
+  label: string;
+}
+
+/** Sections shown in the dashboard side navigation (and used by scroll-spy). */
+export const BUDGET_SECTIONS: BudgetSection[] = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'income', label: 'Where it comes from' },
+  { id: 'dependence', label: 'National vs local' },
+  { id: 'spending', label: 'Where it goes' },
+  { id: 'social', label: 'Social services' },
+  { id: 'compare', label: 'vs. FY2025' },
+  { id: 'about', label: 'About the data' },
+];
+
+export interface GlossaryTerm {
+  term: string;
+  definition: string;
+}
+
+/** Plain-language definitions so residents can study the numbers. */
+export const budgetGlossary: GlossaryTerm[] = [
+  {
+    term: 'National Tax Allotment (NTA)',
+    definition:
+      "Botolan's share of national taxes, sent by the national government. Formerly called the IRA. It is the town's single biggest source of money.",
+  },
+  {
+    term: 'Local sources',
+    definition:
+      'Money the town raises itself — local taxes (like real property and business tax) plus fees and charges for services.',
+  },
+  {
+    term: 'Current operating income',
+    definition:
+      'The regular money the town takes in during the period, from both the NTA and local sources.',
+  },
+  {
+    term: 'Current operating expenditures',
+    definition:
+      'The regular money the town spends to run services and government during the period.',
+  },
+  {
+    term: 'Year-to-date (YTD)',
+    definition:
+      'Totals so far this year. "As of Q3" means January to September — nine months, not a full year.',
+  },
+  {
+    term: 'SRE',
+    definition:
+      'Statement of Receipts and Expenditures — the official financial report every LGU files with the BLGF. These numbers come from it.',
+  },
 ];
 
 /* ------------------------------------------------------------------ *
