@@ -173,7 +173,7 @@ export default function ExchangeRates() {
               id="fx-heading"
               className="font-display text-2xl font-bold text-gray-900 md:text-4xl"
             >
-              Peso exchange rates
+              Exchange Rates(Peso)
             </h2>
             <p className="mt-2 max-w-xl text-gray-600">
               For OFW families — type an amount to see what it&rsquo;s worth in
