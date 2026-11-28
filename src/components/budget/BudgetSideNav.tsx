@@ -48,7 +48,7 @@ export default function BudgetSideNav() {
   return (
     <nav
       aria-label="Budget sections"
-      className="lg:sticky lg:top-24 lg:self-start"
+      className="min-w-0 max-w-full lg:sticky lg:top-24 lg:self-start"
     >
       <p className="mb-2 hidden px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 lg:block">
         On this page

@@ -249,8 +249,10 @@ export default function Budget() {
           {SRE_CURRENT.periodLabel} · {SRE_CURRENT.coverage}
         </div>
 
-        {/* Docs-style layout: sticky nav + content */}
-        <div className="mt-8 grid gap-8 lg:grid-cols-[200px_1fr]">
+        {/* Docs-style layout: sticky nav + content.
+            flex-col on mobile (not grid) so a wide child can't stretch the
+            whole column and overflow the screen. */}
+        <div className="mt-8 flex flex-col gap-8 lg:grid lg:grid-cols-[200px_1fr]">
           <BudgetSideNav />
 
           <div className="min-w-0 space-y-14">
